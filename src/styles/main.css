@@ -1,0 +1,259 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.3.6,
+* Autoprefixer: v10.3.1
+* Browsers: last 4 version
+*/
+:root {
+    --bg-color: hsl(204, 68%, 37%);
+    --bg-color-gradient: hsla(204, 68%, 37%, 0.8);
+    --bg-dark: hsla(204, 94%, 13%, 0.5);
+    --color: hsl(204, 65%, 88%);
+    --link-color: var(--link-color);
+    --border-color: hsl(204, 91%, 27%);
+    --shadow-color: hsl(204, 94%, 13%);
+}
+
+body {
+    color: var(--color);
+    background: var(--bg-color);
+    background: -webkit-gradient(linear, left top, left bottom, from(var(--bg-color-gradient)), color-stop(20%, var(--bg-color)));
+    background: -o-linear-gradient(var(--bg-color-gradient) 0%, var(--bg-color) 20%);
+    background: linear-gradient(var(--bg-color-gradient) 0%, var(--bg-color) 20%);
+    overflow-x: hidden;
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    line-height: 1.6;
+    text-rendering: optimizeSpeed;
+}
+
+a {
+    color: var(--link-color);
+    text-decoration: none;
+    -webkit-transition: all 0.3s ease-out;
+    -o-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
+}
+
+.header {
+    margin: 1rem auto 3rem;
+    padding: 1rem;
+}
+
+.header, .border {
+    border-bottom: thin solid var(--border-color);
+    padding-bottom: 1rem;
+}
+
+.header, .footer, .main {
+    max-width: 50rem;
+}
+
+.navbar {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    display: -ms-grid;
+    display: grid;
+    grid-gap: 3rem;
+    grid-auto-flow: column;
+    -ms-grid-columns: auto 3rem 1fr;
+    grid-template-columns: auto 1fr;
+}
+
+.menu,
+.logo {
+    margin: 0;
+    line-height: 1;
+}
+
+.menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
+    justify-content: end;
+    gap: 2rem;
+}
+
+.menu a {
+    text-transform: uppercase;
+    line-height: 1.55;
+    padding: .3rem;
+}
+
+h1, .active-link, .shadowed, .post-title, h2, h3, h4, h5, h6 {
+    line-height: 1.55;
+    color: var(--color);
+    text-transform: uppercase;
+    text-shadow: var(--shadow-color) 2px 2px 3px;
+}
+
+h1 {
+    font-size: xx-large;
+}
+
+h2 {
+    font-size: x-large;
+}
+
+h2:not(:first-child), h3, h4, h5, h6 {
+    margin: 3rem 0 1rem;
+}
+
+img {
+    max-width: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+}
+
+.post-image,
+.post-title {
+    margin: 1rem 0;
+}
+
+.main {
+    padding: 1rem;
+    margin: 0 auto;
+}
+
+section:not(:first-child) {
+    margin: 4rem 0;
+}
+
+p {
+    margin: 1.5rem 0;
+}
+
+.intro {
+    position: relative;
+    padding: 1rem;
+    border-radius: 7px;
+    background-color: var(--bg-dark);
+}
+
+.intro p {
+    margin-bottom: 0;
+}
+
+.last-posts>ul {
+    margin-top: 2rem;
+    display: -ms-grid;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1rem;
+}
+
+.card,
+.post-metadata {
+    margin: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+}
+
+.post-metadata {
+    padding: 1rem;
+}
+
+.post-date {
+    font-size: smaller;
+    opacity: .8;
+}
+
+.card {
+    background-color: var(--bg-dark);
+    border-radius: 7px;
+    position: relative;
+    overflow: hidden;
+    position: relative;
+}
+
+.card:hover .card__image {
+    -webkit-filter: grayscale(1);
+    filter: grayscale(1);
+}
+
+.card__image {
+    position: relative;
+}
+
+.card__image,
+.card__link {
+    display: block;
+    -webkit-transition: all .5s;
+    -o-transition: all .5s;
+    transition: all .5s;
+    height: 100%;
+}
+
+.listing .post-item {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+.post-item a:focus,
+.post-item a:hover {
+    text-decoration: underline;
+}
+
+.scroll-top {
+    display: block;
+    width: 0;
+    height: 0;
+    border-width: 0 13px 22.5px 13px;
+    border-color: transparent transparent var(--color) transparent;
+    border-style: solid;
+}
+
+.footer {
+    border-top: thin solid var(--border-color);
+    margin: 4rem auto 0;
+    position: sticky;
+    top: 100vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    gap: .25rem;
+    text-align: center;
+    padding: 1rem 2rem 1.7rem;
+}
+
+.post-content a,
+.footer a {
+    text-decoration: underline;
+    text-decoration-thickness: 0.1em;
+}
+
+.post-content a:focus,
+.post-content a:hover,
+.footer a:focus,
+.footer a:hover {
+    text-decoration: none;
+}
+
+@media screen and (min-width: 42rem) {
+    .intro {
+        padding: 2rem;
+    }
+}
