@@ -1,0 +1,55 @@
+body {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    line-height: 1.6;
+}
+
+header {
+    background-color: red;
+    padding: 1rem 3rem;
+}
+
+.navbar {
+    display: flex;
+    display: grid;
+    grid-gap: 3rem;
+    grid-template-columns: auto 1fr;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    gap: 2rem;
+}
+
+.featured,
+.post-title {
+    margin: 1rem 0;
+}
+
+img {
+    max-width: 100%;
+    object-fit: cover;
+}
+
+.main {
+    padding: 1rem;
+    margin: 0 auto;
+    max-width: 50rem;
+}
+
+p {
+    margin: 1.5rem 0;
+}
+
+footer {
+    background-color: red;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: .25rem;
+    text-align: center;
+    padding: 2rem;
+}
