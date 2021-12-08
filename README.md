@@ -5,6 +5,7 @@ A very minimalist blue theme built with Typescript and Gatsby.
 [See live demo](https://demos.julien-maury.dev/gatsby-juma)
 
 No option, but it's easy to start. To add content, just open the `./content` folder and add markdown files. There are practical examples for your inspiration.
+Featured images for posts are mandatory for now.
 
 You can customize fonts here `./src/utils/typography.js`.
 
