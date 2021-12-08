@@ -82,6 +82,7 @@ a {
 }
 
 .menu a {
+    color: var(--color);
     text-transform: uppercase;
     line-height: 1.55;
     padding: .3rem;
