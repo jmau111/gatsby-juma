@@ -10,9 +10,9 @@ You can customize fonts here `./src/utils/typography.js`.
 
 ## 🎃 Change styles
 
-If you know what you're doing, you can tweak stylews in `./src/styles`. The theme does not use styled components, but basic CSS that I hook (~ add) in `./gatsby-browser.js`.
+If you know what you're doing, you can tweak stylews in `./src/styles`. The theme does not use styled components but basic CSS that I hook (~ add) in `./gatsby-browser.js`.
 
-## 🎃 Starting Juma
+## 🌪 Starting Juma
 
 ```
 git clone https://github.com/jmau111/gatsby-juma.git and cd gatsby-juma && yarn && yarn dev
@@ -57,6 +57,17 @@ Then, add the entry in `./gatsby-config.js`:
       },
     },
 ```
+
+## Todo
+
+This theme is barebone (on purpose). However, some additional feature might be interesting:
+
+* search feature
+* dark mode toggle even if the current palette does not need it, IMHO, but people who change colors might want a light mode
+* json-ld and additional meta
+* humans.txt
+* menu, sub-menus and responsive menu
+
 ## 🚀 Quick start
 
 1.  **Create a Gatsby site.**
@@ -74,7 +85,7 @@ Then, add the entry in `./gatsby-config.js`:
 
     ```shell
     cd my-themed-site/
-    gatsby develop
+    yarn dev
     ```
 
 3.  **Open the code and start customizing!**
@@ -124,13 +135,3 @@ Here are some places to start:
 - **For most developers, we recommend starting with our [in-depth tutorial for creating a site with Gatsby](https://www.gatsbyjs.com/tutorial/).** It starts with zero assumptions about your level of ability and walks through every step of the process.
 
 - **To dive straight into code samples, head [to our documentation](https://www.gatsbyjs.com/docs/).** In particular, check out the _Guides_, _API Reference_, and _Advanced Tutorials_ sections in the sidebar.
-
-## Todo
-
-This theme is barebone (on purpose). However, some additional feature might be interesting:
-
-* search feature
-* dark mode toggle even if the current palette does not need it, IMHO, but people who change colors might want a light mode
-* json-ld and additional meta
-* humans.txt
-* menu, sub-menus and responsive menu
