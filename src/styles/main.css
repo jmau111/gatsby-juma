@@ -83,9 +83,55 @@ a {
     padding: .3rem;
 }
 
-.toggle {
-    padding-top: 10px;
+.show {
+    display: initial;
 }
+
+.hide {
+    display: none;
+}
+
+.bars-container {
+    -webkit-appearance: none;
+    appearance: none;
+    background: transparent;
+    border: 0;
+    cursor: pointer;
+    float: right;
+    min-height: 48px;
+    min-width: 48px;
+}
+
+.bars {
+    display: block;
+    width: 24px;
+    height: 3px;
+    border-radius: 2px;
+    background: var(--color);
+    margin: 10px 0;
+    position: relative;
+    z-index: 1000;
+}
+
+.bars:before, .bars:after {
+    border-radius: 2px;
+    height: 3px;
+    background: var(--color);
+    content: " ";
+    position: absolute;
+    right: 0;
+}
+
+.bars:before {
+    top: -7px;
+    width: 20px;
+}
+
+.bars:after {
+    top: 7px;
+    width: 16px;
+}
+
 
 .toggle input[type="checkbox"] {
     -webkit-appearance: none;
@@ -95,11 +141,6 @@ a {
     outline: 0;
     cursor: pointer;
     margin: 10px;
-}
-
-.toggle span {
-    display: inline-block;
-    vertical-align: 4px;
 }
 
 .toggle input[type="checkbox"]:after {
@@ -302,6 +343,15 @@ p {
 @media screen and (min-width: 42rem) {
     .intro {
         padding: 2rem;
+    }
+
+    .show, .hide {
+        display: initial;
+        text-align: end;
+    }
+
+    .bars-container {
+        display: none;
     }
 
     .navbar {
