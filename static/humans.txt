@@ -6,8 +6,8 @@
                                                       
 
 /* TEAM */
-Developer: Your name
-GitHub: your GitHub handle
+Developer: [Your name]
+GitHub: [your GitHub handle]
 
 /* THANKS */
 Gatsby
@@ -20,4 +20,4 @@ Components: humans-generator
 Softwares: Visual Studio Code
 
 /* NOTE */
-Made in Marseile.
+Made in [Your city]
