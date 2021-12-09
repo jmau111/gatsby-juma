@@ -16,7 +16,7 @@ const MenuItems = [
   {
     text: "About",
     url: "/about",
-  }
+  },
 ]
 
 const Nav: React.FunctionComponent<NavProps> = ({
@@ -30,14 +30,26 @@ const Nav: React.FunctionComponent<NavProps> = ({
     customClasses.push(className)
   }
 
+  const [isActive, setActive] = React.useState<boolean>(false);
+
+  const handleToggle = () => {
+    setActive(!isActive);
+  };
+
   return (
     <header className={customClasses.join(" ")} {...props}>
       <nav className="navbar">
         <Link to="/">
           <img className="logo" src={Logo} width="42" height="42" alt="" />
         </Link>
-        <Menu items={MenuItems} />
-        <DarkMode />
+
+        <button type="button" className="bars-container" onClick={handleToggle}>
+          <span className="bars" aria-label="toggle menu"></span>
+        </button>
+        <div className={isActive ? "show" : "hide"}>
+          <Menu items={MenuItems} />
+          <DarkMode />
+        </div>
       </nav>
     </header>
   )

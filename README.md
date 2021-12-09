@@ -70,7 +70,7 @@ This theme is barebone (on purpose). However, some additional feature might be i
 
 * search feature
 * json-ld and additional meta
-* menu, sub-menus and responsive menu
+* submenus
 
 ## 🚀 Quick start
 
