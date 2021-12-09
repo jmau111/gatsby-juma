@@ -69,7 +69,6 @@ Go modify `./static/humans.txt` with your team info.
 This theme is barebone (on purpose). However, some additional feature might be interesting:
 
 * search feature
-* dark mode toggle even if the current palette does not need it, IMHO, but people who change colors might want a light mode
 * json-ld and additional meta
 * menu, sub-menus and responsive menu
 

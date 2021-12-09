@@ -12,7 +12,9 @@ module.exports = {
     siteUrl: `https://demos.julien-maury.dev`,
   },
   plugins: [
-    `gatsby-plugin-image`,
+    {
+      resolve: `gatsby-plugin-image`,
+    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -79,6 +81,9 @@ module.exports = {
     },
     {
       resolve: `gatsby-plugin-lodash`,
+    },
+    {
+      resolve: `gatsby-plugin-dark-mode`,
     }
   ],
 }

@@ -1,7 +1,8 @@
 import React, { useState } from "react"
 import { Link } from "gatsby"
 import Menu from "./menu"
-import Logo from "../../../images/logo.png";
+import DarkMode from "../DarkMode"
+import Logo from "../../../images/logo.png"
 
 type NavProps = {
   className?: string
@@ -36,6 +37,7 @@ const Nav: React.FunctionComponent<NavProps> = ({
           <img className="logo" src={Logo} width="42" height="42" alt="" />
         </Link>
         <Menu items={MenuItems} />
+        <DarkMode />
       </nav>
     </header>
   )
