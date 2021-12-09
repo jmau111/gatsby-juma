@@ -7,7 +7,10 @@ type DarkModeProps = {
     toggleTheme: any,
 }
 
-const DarkMode: React.FunctionComponent<DarkModeProps> = () => {
+const DarkMode: React.FunctionComponent<DarkModeProps> = ({
+    theme,
+    toggleTheme,
+}) => {
     return (
         <ThemeToggler>
             {({ theme, toggleTheme }: DarkModeProps) => (
