@@ -5881,13 +5881,6 @@ gatsby-plugin-sharp@^4.3.0:
     svgo "1.3.2"
     uuid "3.4.0"
 
-gatsby-plugin-styled-components@^5.3.0:
-  version "5.3.0"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-styled-components/-/gatsby-plugin-styled-components-5.3.0.tgz#e8818d7ac19eab7eedcc1b149c100db4559926aa"
-  integrity sha512-X4sHCsNOy+w8ah3atH51NAQCCDYt7yxx22Pjir02D84aFETqWIBXE9+uPykWWDshbEjcxKcPTK+Dj553+msABg==
-  dependencies:
-    "@babel/runtime" "^7.15.4"
-
 gatsby-plugin-typescript@^4.3.0:
   version "4.3.0"
   resolved "https://registry.yarnpkg.com/gatsby-plugin-typescript/-/gatsby-plugin-typescript-4.3.0.tgz#9c6eec924695835326251fd0b4a44c4dcba26c5f"
