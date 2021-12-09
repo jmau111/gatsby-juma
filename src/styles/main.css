@@ -21,7 +21,7 @@ body.dark {
     --color: hsl(204, 65%, 88%);
     --link-color: hsl(201, 100%, 97%);
     --border-color: hsl(201, 7%, 46%);
-    --shadow-color: hsl(204, 94%, 13%);
+    --shadow-color: hsl(279, 50%, 41%);
 }
 
 .dark img {
