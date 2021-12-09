@@ -72,17 +72,8 @@ a {
     line-height: 1;
 }
 
-.menu {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    -webkit-box-pack: end;
-    -ms-flex-pack: end;
-    justify-content: end;
-    gap: 2rem;
+.menu li {
+    margin: 1rem 0;
 }
 
 .menu a {
@@ -103,7 +94,7 @@ a {
     border: 0;
     outline: 0;
     cursor: pointer;
-    margin: 10px;    
+    margin: 10px;
 }
 
 .toggle span {
@@ -323,5 +314,24 @@ p {
         grid-auto-flow: column;
         -ms-grid-columns: auto 3rem 1fr;
         grid-template-columns: auto 1fr;
+    }
+
+    .menu {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        gap: 2rem;
+        display: inline-flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        -webkit-box-pack: end;
+        -ms-flex-pack: end;
+        justify-content: end;
+        gap: 0;
+    }
+
+    .menu>li {
+        margin: 0;
     }
 }
