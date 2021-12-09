@@ -72,7 +72,7 @@ a {
     line-height: 1;
 }
 
-.menu li {
+.menu>li {
     margin: 1rem 0;
 }
 
