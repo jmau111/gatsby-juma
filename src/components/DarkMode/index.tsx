@@ -3,7 +3,7 @@ import { ThemeToggler } from 'gatsby-plugin-dark-mode'
 
 type DarkModeProps = {
     children: React.ReactNode,
-    theme: any,
+    theme: string,
     toggleTheme: any,
 }
 
