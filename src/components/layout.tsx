@@ -4,7 +4,8 @@ import Nav from "./Nav"
 import Footer from "./Footer"
 
 type LayoutProps = {
-  children: React.ReactNode
+  children: React.ReactNode,
+  className: string,
 }
 
 const Layout: React.FunctionComponent<LayoutProps> = ({ children, className }) => {
