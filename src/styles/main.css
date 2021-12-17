@@ -52,6 +52,36 @@ a {
     transition: all 0.3s ease-out;
 }
 
+.screen-reader-text {
+    border: 0;
+    clip: rect(1px, 1px, 1px, 1px);
+    clip-path: inset(50%);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+    word-wrap: normal !important;
+}
+
+.screen-reader-text:focus {
+    background-color: #eee;
+    clip: auto !important;
+    clip-path: none;
+    color: #444;
+    display: block;
+    font-size: 1em;
+    height: auto;
+    left: 5px;
+    line-height: normal;
+    padding: 15px 23px 14px;
+    text-decoration: none;
+    top: 5px;
+    width: auto;
+    z-index: 100000;
+}
+
 .header {
     margin: 1rem auto 3rem;
     padding: 1rem;
@@ -94,7 +124,7 @@ a {
 .bars-container {
     -webkit-appearance: none;
     -moz-appearance: none;
-         appearance: none;
+    appearance: none;
     background: transparent;
     border: 0;
     cursor: pointer;
@@ -163,13 +193,13 @@ a {
     border-radius: 50%;
     background: var(--color);
     -webkit-box-shadow: 1px 1px 3px var(--shadow-color);
-            box-shadow: 1px 1px 3px var(--shadow-color);
+    box-shadow: 1px 1px 3px var(--shadow-color);
 }
 
 .toggle input[type="checkbox"]:checked:before {
     left: 22px;
     -webkit-box-shadow: -1px 1px 3px var(--shadow-color);
-            box-shadow: -1px 1px 3px var(--shadow-color);
+    box-shadow: -1px 1px 3px var(--shadow-color);
 }
 
 .toggle input[type="checkbox"]:checked:after {
@@ -351,8 +381,8 @@ p {
         display: -ms-flexbox;
         display: flex;
         -webkit-box-pack: end;
-            -ms-flex-pack: end;
-                justify-content: end;
+        -ms-flex-pack: end;
+        justify-content: end;
     }
 
     .bars-container {

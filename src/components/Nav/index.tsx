@@ -41,10 +41,11 @@ const Nav: React.FunctionComponent<NavProps> = ({
       <nav className="navbar">
         <Link to="/">
           <img className="logo" src={Logo} width="42" height="42" alt="" />
+          <span className="screen-reader-text">Go to Homepage</span>
         </Link>
 
-        <button type="button" className="bars-container" onClick={handleToggle}>
-          <span className="bars" aria-label="toggle menu"></span>
+        <button type="button" aria-label="toggle menu" className="bars-container" onClick={handleToggle}>
+          <span className="bars" aria-hidden="true"></span>
         </button>
         <div className={isActive ? "show" : "hide"}>
           <Menu items={MenuItems} />

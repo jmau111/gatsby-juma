@@ -124,6 +124,12 @@ Deploy this starter with one click on [Gatsby Cloud](https://www.gatsbyjs.com/cl
 
 9.  **`README.md`**: A text file containing useful reference information about your project.
 
+## About Preact
+
+The theme uses [Preact](https://preactjs.com/), a much lighter alternative of React. Most gatsby websites and plugins will work fine, but some of them might be incompatible with it.
+
+Be careful.
+
 ## 🎓 Learning Gatsby
 
 Looking for more guidance? Full documentation for Gatsby lives [on the website](https://www.gatsbyjs.com/).
