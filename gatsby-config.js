@@ -12,6 +12,7 @@ module.exports = {
     siteUrl: `https://demos.julien-maury.dev`,
   },
   plugins: [
+    `gatsby-plugin-preact`,
     {
       resolve: `gatsby-plugin-image`,
     },
