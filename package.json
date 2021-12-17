@@ -1,7 +1,7 @@
 {
   "name": "gatsby-juma",
   "description": "A Blue Theme for Gatsby using typescript",
-  "version": "0.0.1",
+  "version": "1.0",
   "author": "Julien Maury",
   "dependencies": {
     "axios": "^0.24.0",
