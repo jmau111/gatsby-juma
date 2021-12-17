@@ -41,6 +41,7 @@ const Nav: React.FunctionComponent<NavProps> = ({
       <nav className="navbar">
         <Link to="/">
           <img className="logo" src={Logo} width="42" height="42" alt="" />
+          <span className="screen-reader-text">Go to Homepage</span>
         </Link>
 
         <button type="button" className="bars-container" onClick={handleToggle}>
