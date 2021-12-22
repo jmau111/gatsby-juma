@@ -7,7 +7,7 @@ module.exports = {
   siteMetadata: {
     title: `Gatsby Juma`,
     author: `Julien Maury`,
-    about: `A Gatsby Theme for picture lovers using typescript`,
+    about: `A Gatsby blue Theme using typescript`,
     description: `A Gatsby Blog theme`,
     siteUrl: `https://demos.julien-maury.dev`,
   },
