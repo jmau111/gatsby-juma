@@ -6,7 +6,7 @@
   "dependencies": {
     "axios": "^0.24.0",
     "dotenv": "^10.0.0",
-    "gatsby": "^4.3.0",
+    "gatsby": "^4.4.0",
     "gatsby-plugin-dark-mode": "^1.1.2",
     "gatsby-plugin-image": "^2.4.0",
     "gatsby-plugin-lodash": "^5.3.0",
