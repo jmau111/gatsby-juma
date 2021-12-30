@@ -64,6 +64,16 @@ Then, add the entry in `./gatsby-config.js`:
 We are humans, not machines. The humans.txt file is a tribute to the people who have contributed to the building of a website.
 Go modify `./static/humans.txt` with your team info.
 
+## Weird issues
+
+If you have some issues with static images and queries, you might save a lot of time by using the custom yarn command:
+
+```
+yarn cleandev
+``` 
+
+It will execute `gatsby clean` before `gatsby develop`, which deletes the cache folder and ensures there's no outdated stuff that can jam your app.
+
 ## Todo
 
 This theme is barebone (on purpose). However, some additional feature might be interesting:
