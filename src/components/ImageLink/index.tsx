@@ -1,7 +1,6 @@
 import * as React from "react"
 import { Link } from "gatsby"
 import _ from "lodash"
-import { GatsbyImage } from "gatsby-plugin-image"
 interface ImageProps {
   imageUrl: string
   title: string

@@ -3,7 +3,6 @@ import { Link, graphql } from "gatsby"
 import Pagination from "../components/Pagination"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import ImageLink from "../components/ImageLink"
 
 const BlogList = (props: any) => {
   const { data } = props
