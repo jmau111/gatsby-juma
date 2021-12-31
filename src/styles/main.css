@@ -129,6 +129,23 @@ a {
     padding: .3rem;
 }
 
+::-webkit-input-placeholder {
+    color: var(--color);
+    text-transform: uppercase;
+    font-size: .95rem;
+    opacity: 1;
+}
+
+:-ms-input-placeholder {
+    color: var(--color);   
+    opacity: 1;
+}
+
+::placeholder {
+    color: var(--color);
+    opacity: 1;
+}
+
 .search {
     position: relative;
     margin-bottom: 2rem;
@@ -155,7 +172,7 @@ a {
     padding: .2rem .5rem 0;
     background-color: transparent;
     border: 0;
-    border-bottom: thin solid var(--border-color);
+    border-bottom: thin solid var(--color);
     outline-color: var(--color);
     color: var(--color);
 }

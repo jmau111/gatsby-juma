@@ -3,35 +3,41 @@ import { useStaticQuery, graphql, Link } from 'gatsby'
 import { useFlexSearch } from 'react-use-flexsearch'
 import { Formik, Form, Field } from 'formik'
 
-type SearchBarProps = {}
+type SearchBarProps = {
+    query?: string
+}
 
-const SearchBar: React.FunctionComponent<SearchBarProps> = () => {
+const SearchBar: React.FunctionComponent<{}> = () => {
     const Data = useStaticQuery(graphql`{
         localSearchPages {
             index
             store
         }
     }`)
+    
+    const initialValues: SearchBarProps = { query: '' };
     const [query, setQuery] = useState(null)
     const results = useFlexSearch(query, Data?.localSearchPages?.index, Data?.localSearchPages?.store)
+    const noResult = query !== null && results.length === 0
 
     return (
         <div className="search">
             <Formik
-                initialValues={{ query: '' }}
+                initialValues={initialValues}
                 onSubmit={(values, { setSubmitting }) => {
                     setQuery(values.query)
                     setSubmitting(false)
                 }}
             >
                 <Form className="search__form">
-                    <Field className="search__input" name="query" />
+                    <label htmlFor="search-input" className="screen-reader-text">Enter search keywords</label>
+                    <Field id="search-input" placeholder="Search..." className="search__input" name="query" />
                     <button className="search__submit" type="submit"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg></button>
                 </Form>
             </Formik>
             <div className="search__results">
                 <ul>
-                    {results.map(r => (
+                    {results.length > 0 && results.map(r => (
                         <li key={r.id}>
                             <Link className="search__link" to={r?.path}>
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -42,6 +48,7 @@ const SearchBar: React.FunctionComponent<SearchBarProps> = () => {
                             </Link>
                         </li>
                     ))}
+                    {noResult && <li className="search__link">No result :(</li>}
                 </ul>
             </div>
         </div>
