@@ -4,24 +4,30 @@
 * Autoprefixer: v10.3.1
 * Browsers: last 4 version
 */
+
 :root {
     --bg-color: hsl(204, 68%, 37%);
     --bg-color-gradient: hsla(204, 68%, 37%, 0.8);
     --bg-dark: hsla(204, 94%, 13%, 0.5);
+    --bg-search-results: hsl(204, 94%, 13%);
     --color: hsl(204, 65%, 88%);
     --link-color: hsl(204, 63%, 74%);
     --border-color: hsl(204, 91%, 27%);
-    --shadow-color: hsl(204, 94%, 13%);
+    --shadow-color: rgb(2, 39, 64);
+    --color-toggle-svg: var(--color);
+    --border-color-search: hsl(0, 4%, 18%);
 }
 
 body.dark {
     --bg-color: hsl(219, 19%, 28%);
     --bg-color-gradient: var(--bg-color);
     --bg-dark: hsla(210, 22%, 4%, 0.5);
+    --bg-search-results: hsl(210, 22%, 4%);
     --color: hsl(204, 65%, 88%);
     --link-color: hsl(201, 100%, 97%);
     --border-color: hsl(201, 7%, 46%);
     --shadow-color: hsl(279, 50%, 41%);
+    --color-toggle-svg: var(--color);
 }
 
 .dark img {
@@ -55,6 +61,7 @@ a {
 .screen-reader-text {
     border: 0;
     clip: rect(1px, 1px, 1px, 1px);
+    -webkit-clip-path: inset(50%);
     clip-path: inset(50%);
     height: 1px;
     margin: -1px;
@@ -68,6 +75,7 @@ a {
 .screen-reader-text:focus {
     background-color: #eee;
     clip: auto !important;
+    -webkit-clip-path: none;
     clip-path: none;
     color: #444;
     display: block;
@@ -115,6 +123,85 @@ a {
     text-transform: uppercase;
     line-height: 1.55;
     padding: .3rem;
+}
+
+.search {
+    position: relative;
+    margin-bottom: 2rem;
+}
+
+.search__form {
+    margin: 0;
+    padding: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.search__input {
+    width: calc(100% - 1rem);
+    margin: 0 auto 1rem;
+    padding: 0 .5rem;
+    background-color: transparent;
+    border: 0;
+    border-bottom: thin solid var(--border-color);
+    outline-color: var(--color);
+    color: var(--color);
+}
+
+.search__submit {
+    cursor: pointer;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-color: transparent;
+    border: 0;
+    margin: 0;
+    padding: 0;
+    color: var(--color);
+    outline-color: var(--color);
+}
+
+.search__results {
+    position: absolute;
+    z-index: 888;
+    min-height: 56px;
+    min-width: 100%;
+    top: 56px;
+    left: 0;
+}
+
+.search__results li {
+    margin: 0;
+}
+
+.search__link {
+    display: block;
+    padding: 1rem;
+    background-color: var(--bg-search-results);
+    color: var(--color);
+}
+
+.search__link svg,
+.search__link span {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.search__link svg {
+    margin-right: 1rem;
+}
+
+.search__link:focus,
+.search__link:hover {
+    background-color: var(--bg-dark);
 }
 
 .show {
@@ -167,6 +254,10 @@ a {
     width: 16px;
 }
 
+.toggle {
+    color: var(--color-svg);
+}
+
 .toggle input[type="checkbox"] {
     -webkit-appearance: none;
     -webkit-tap-highlight-color: transparent;
@@ -174,7 +265,7 @@ a {
     border: 0;
     outline: 0;
     cursor: pointer;
-    margin: 15px 20px 10px;
+    margin: 0 20px;
 }
 
 .toggle input[type="checkbox"]:after {
@@ -393,26 +484,29 @@ p {
         display: none;
     }
 
-    .navbar {
+    .navbar, .navbar__container {
         display: -webkit-box;
         display: -ms-flexbox;
         display: flex;
-        display: -ms-grid;
-        display: grid;
-        grid-gap: 3rem;
-        grid-auto-flow: column;
-        -ms-grid-columns: auto 3rem 1fr;
-        grid-template-columns: auto 1fr;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+    }
+
+    .navbar__container {
+        gap: 1.5rem;
     }
 
     .menu {
+        -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+        flex-grow: 1;
         display: -webkit-box;
         display: -ms-flexbox;
         display: flex;
-        gap: 2rem;
-        display: -webkit-inline-box;
-        display: -ms-inline-flexbox;
-        display: inline-flex;
         -webkit-box-align: center;
         -ms-flex-align: center;
         align-items: center;
@@ -422,7 +516,24 @@ p {
         gap: 0;
     }
 
+    .search__submit,
+    .toggle {
+        padding: .5rem 0 0;
+        color: var(--color-svg);
+    }
+
+    .search__results {
+        min-width: 75vh;
+    }
+
+    .search,
+    .search__input,
     .menu>li {
         margin: 0;
+    }
+
+    .search__input {
+        padding: 0 .4rem;
+        width: 100%;
     }
 }

@@ -2,6 +2,7 @@ import React from "react"
 import { Link } from "gatsby"
 import Menu from "./menu"
 import DarkMode from "../DarkMode"
+import SearchBar from "../SearchBar"
 import Logo from "../../../images/logo.png"
 
 type NavProps = {
@@ -36,6 +37,8 @@ const Nav: React.FunctionComponent<NavProps> = ({
     setActive(!isActive);
   };
 
+  const state = isActive ? "show" : "hide";
+
   return (
     <header className={customClasses.join(" ")} {...props}>
       <nav className="navbar">
@@ -47,8 +50,9 @@ const Nav: React.FunctionComponent<NavProps> = ({
         <button type="button" aria-label="toggle menu" className="bars-container" onClick={handleToggle}>
           <span className="bars" aria-hidden="true"></span>
         </button>
-        <div className={isActive ? "show" : "hide"}>
+        <div className={"navbar__container" + " " + state}>
           <Menu items={MenuItems} />
+          <SearchBar />
           <DarkMode />
         </div>
       </nav>

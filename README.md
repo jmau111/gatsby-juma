@@ -78,7 +78,6 @@ It will execute `gatsby clean` before `gatsby develop`, which deletes the cache 
 
 This theme is barebone (on purpose). However, some additional feature might be interesting:
 
-* search feature
 * json-ld and additional meta
 * submenus
 
