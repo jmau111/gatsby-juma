@@ -31,14 +31,14 @@ const SearchBar: React.FunctionComponent<SearchBarProps> = () => {
             </Formik>
             <div className="search__results">
                 <ul>
-                    {results.map(result => (
-                        <li key={result.id}>
-                            <Link className="search__link" to={result?.path}>
+                    {results.map(r => (
+                        <li key={r.id}>
+                            <Link className="search__link" to={r?.path}>
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                     <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
                                     <circle cx="12" cy="12" r="3"></circle>
                                 </svg>
-                                <span>{result?.title}</span>
+                                <span>{r?.title}</span>
                             </Link>
                         </li>
                     ))}

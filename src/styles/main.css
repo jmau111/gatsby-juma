@@ -6,10 +6,12 @@
 */
 
 :root {
+    color-scheme: light;
     --bg-color: hsl(204, 68%, 37%);
     --bg-color-gradient: hsla(204, 68%, 37%, 0.8);
     --bg-dark: hsla(204, 94%, 13%, 0.5);
     --bg-search-results: hsl(204, 94%, 13%);
+    --bg-search-results-hover: hsl(204, 83%, 24%);
     --color: hsl(204, 65%, 88%);
     --link-color: hsl(204, 63%, 74%);
     --border-color: hsl(204, 91%, 27%);
@@ -19,10 +21,12 @@
 }
 
 body.dark {
+    color-scheme: dark;
     --bg-color: hsl(219, 19%, 28%);
     --bg-color-gradient: var(--bg-color);
     --bg-dark: hsla(210, 22%, 4%, 0.5);
     --bg-search-results: hsl(210, 22%, 4%);
+    --bg-search-results-hover: hsl(208, 18%, 14%);
     --color: hsl(204, 65%, 88%);
     --link-color: hsl(201, 100%, 97%);
     --border-color: hsl(201, 7%, 46%);
@@ -148,7 +152,7 @@ a {
 .search__input {
     width: calc(100% - 1rem);
     margin: 0 auto 1rem;
-    padding: 0 .5rem;
+    padding: .2rem .5rem 0;
     background-color: transparent;
     border: 0;
     border-bottom: thin solid var(--border-color);
@@ -201,7 +205,7 @@ a {
 
 .search__link:focus,
 .search__link:hover {
-    background-color: var(--bg-dark);
+    background-color: var(--bg-search-results-hover);
 }
 
 .show {
