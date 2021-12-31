@@ -87,6 +87,10 @@ a {
     padding: 1rem;
 }
 
+.single .header {
+    margin-bottom: 1.5rem;
+}
+
 .header, .border {
     border-bottom: thin solid var(--border-color);
     padding-bottom: 1rem;
