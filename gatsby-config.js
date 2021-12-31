@@ -100,6 +100,40 @@ module.exports = {
     },
     {
       resolve: `gatsby-plugin-dark-mode`,
-    }
+    },
+    {
+      resolve: 'gatsby-plugin-local-search',
+      options: {
+        name: 'pages',
+        engine: 'flexsearch',
+        engineOptions: 'speed',
+        query: `
+          {
+            allMarkdownRemark {
+              nodes {
+                id
+                fields {
+                  slug
+                }
+                frontmatter {
+                  title
+                }
+                rawMarkdownBody
+              }
+            }
+          }
+        `,
+        ref: 'id',
+        index: ['title', 'body'],
+        store: ['id', 'path', 'title'],
+        normalizer: ({ data }) =>
+          data.allMarkdownRemark.nodes.map((node) => ({
+            id: node.id,
+            path: node.fields.slug,
+            title: node.frontmatter.title,
+            body: node.rawMarkdownBody,
+          })),
+      },
+    },
   ],
 }
