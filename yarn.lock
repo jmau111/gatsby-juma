@@ -5689,10 +5689,10 @@ gatsby-plugin-local-search@^2.0.1:
     lunr "^2.3.8"
     pascal-case "^3.1.1"
 
-gatsby-plugin-lodash@^5.3.0:
-  version "5.3.0"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-lodash/-/gatsby-plugin-lodash-5.3.0.tgz#71f1b7f3e07397ddab68d5b9d6370662afb0e679"
-  integrity sha512-kxLs7rhYKNSNKFCSGUOA1C7WZ5xQ+6/UTyFgN1zz2UpnPzEniTsB+zXzQ2ga6QfUssv5kcGO9AKyMPNU+UlSIQ==
+gatsby-plugin-lodash@^5.4.0:
+  version "5.4.0"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-lodash/-/gatsby-plugin-lodash-5.4.0.tgz#8e4bfd2214f001252264747d1430aea4e714350e"
+  integrity sha512-RZWXUwQiGvVSfVncoqSjNm3iupSaToT1v0yr+HTk/RN5YKmN+XDMrNedVmODmE+tMHYO8tyUpRvTL3aY1QRCcw==
   dependencies:
     "@babel/runtime" "^7.15.4"
     babel-plugin-lodash "^3.3.4"
