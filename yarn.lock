@@ -5724,10 +5724,10 @@ gatsby-remark-images@^6.8.1:
     unist-util-select "^3.0.4"
     unist-util-visit-parents "^3.1.1"
 
-gatsby-remark-smartypants@^5.6.0:
-  version "5.6.0"
-  resolved "https://registry.yarnpkg.com/gatsby-remark-smartypants/-/gatsby-remark-smartypants-5.6.0.tgz#71545c45d610c1d53fe87d81424346e9cb17ffa7"
-  integrity sha512-qGRLXqmLAk8B2tMo7IPywJRR/IqqyhNd3dHyOb84c4Rlxgw436LNX2aaVO0wc26OcW99/ZKbbfSMEXqyqiQcHw==
+gatsby-remark-smartypants@^5.9.0:
+  version "5.9.0"
+  resolved "https://registry.yarnpkg.com/gatsby-remark-smartypants/-/gatsby-remark-smartypants-5.9.0.tgz#38be174debce71a3c98577a2008c689b7d09ae6e"
+  integrity sha512-d8Z16JjWH7ymcqc+/D3eSu84hGQNCw5JacxR1r9Kn8Fy7pAsnfLVM/bTCnq/jBkSnqux2VwoehSYrvQTNmipNA==
   dependencies:
     "@babel/runtime" "^7.15.4"
     retext "^7.0.1"
