@@ -6236,10 +6236,10 @@ gatsby-plugin-manifest@^4.10.1:
     semver "^7.3.5"
     sharp "^0.30.1"
 
-gatsby-plugin-no-sourcemaps@^4.4.0:
-  version "4.4.0"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-no-sourcemaps/-/gatsby-plugin-no-sourcemaps-4.4.0.tgz#fd6214b724ab6d077df94b38868c1b2f0354742a"
-  integrity sha512-/kYfxN2d9plqUXvCL7L4L93/GTEYrKeTiiVz5AawqWSaBNBXTxdz9YcGEyccrFu6tNhfj9WpqyQaymrPDARTsw==
+gatsby-plugin-no-sourcemaps@^4.10.0:
+  version "4.10.0"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-no-sourcemaps/-/gatsby-plugin-no-sourcemaps-4.10.0.tgz#0fb53c32f42bc57756c688983cedc4ff48b0382f"
+  integrity sha512-IV/QzPeqBxxktBmyjQGJNJTUpOZMJXR6jewOdddOGMNfvOcvHGKxatwuk3trXLp6offhY5xXR6MfcQyPCyjdFg==
   dependencies:
     "@babel/runtime" "^7.15.4"
 
