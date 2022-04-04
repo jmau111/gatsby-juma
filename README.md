@@ -105,7 +105,7 @@ This theme is barebone (on purpose). However, some additional feature might be i
 
     Your site is now running at `http://localhost:8000`!
 
-    To get started, check out the guide to [getting started with using multiple themes](https://gatsbyjs.com/docs/themes/using-a-gatsby-theme), or the [general themes docs](https://gatsbyjs.com/docs/themes).
+    To get started, check out the guide to [getting started with using multiple themes](https://github.com/jmau111/gatsby-juma), or the [general themes docs](https://gatsbyjs.com/docs/themes).
 
 ## 🚀 Quick start (Gatsby Cloud)
 
