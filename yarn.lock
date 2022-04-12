@@ -6107,7 +6107,7 @@ gatsby-cli@^4.10.2:
     yoga-layout-prebuilt "^1.10.0"
     yurnalist "^2.1.0"
 
-gatsby-core-utils@^3.10.0, gatsby-core-utils@^3.10.1, gatsby-core-utils@^3.11.1, gatsby-core-utils@^3.6.0, gatsby-core-utils@^3.7.0, gatsby-core-utils@^3.8.1, gatsby-core-utils@^3.8.2, gatsby-core-utils@^3.9.0, gatsby-core-utils@^3.9.1:
+gatsby-core-utils@^3.10.0, gatsby-core-utils@^3.10.1, gatsby-core-utils@^3.11.1, gatsby-core-utils@^3.7.0, gatsby-core-utils@^3.8.1, gatsby-core-utils@^3.8.2, gatsby-core-utils@^3.9.0, gatsby-core-utils@^3.9.1:
   version "3.11.1"
   resolved "https://registry.yarnpkg.com/gatsby-core-utils/-/gatsby-core-utils-3.11.1.tgz#ea87c1d3aa45c26c9ea32b8e8b029afe6a56f8c7"
   integrity sha512-Op9/uihtcsDLlZDfRsGJ1ya2mFx2YH9Zmx93bawElZ0YpIzKjCkNTp+I5i5UANxvs5I+Fljl0WHQRudMWg+fWA==
@@ -6253,14 +6253,14 @@ gatsby-plugin-no-sourcemaps@^4.10.0:
   dependencies:
     "@babel/runtime" "^7.15.4"
 
-gatsby-plugin-offline@^5.6.0:
-  version "5.6.0"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-offline/-/gatsby-plugin-offline-5.6.0.tgz#d1d36140adf8b6cde45b48e1eb8146141b778ef6"
-  integrity sha512-3ir3P9B6dZGotw4ISe/F3KBZ2zwZtOSQmtOBH6A+KtSlfh4Epyf1VDawiZzBv7QOpbrrjVyL8rs109cIBxlJbA==
+gatsby-plugin-offline@^5.11.1:
+  version "5.11.1"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-offline/-/gatsby-plugin-offline-5.11.1.tgz#2af347d332e939bec01fe81aaee8fb4414f68a56"
+  integrity sha512-V03VnGIl3oqT6zaq7PYc+sAUZGpETbTH0Z3wKwA8xBk5abmkO+5Vti8kp9WW9Mly7b49vDjgMZ+Dn11FSBTiOg==
   dependencies:
     "@babel/runtime" "^7.15.4"
     cheerio "^1.0.0-rc.10"
-    gatsby-core-utils "^3.6.0"
+    gatsby-core-utils "^3.11.1"
     glob "^7.2.0"
     idb-keyval "^3.2.0"
     lodash "^4.17.21"
