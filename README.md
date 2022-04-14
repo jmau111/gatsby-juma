@@ -107,12 +107,6 @@ This theme is barebone (on purpose). However, some additional feature might be i
 
     To get started, check out the guide to [getting started with using multiple themes](https://github.com/jmau111/gatsby-juma), or the [general themes docs](https://gatsbyjs.com/docs/themes).
 
-## 🚀 Quick start (Gatsby Cloud)
-
-Deploy this starter with one click on [Gatsby Cloud](https://www.gatsbyjs.com/cloud/):
-
-[<img src="https://www.gatsbyjs.com/deploynow.svg" alt="Deploy to Gatsby Cloud">](https://www.gatsbyjs.com/dashboard/deploynow?url=https://github.com/gatsbyjs/gatsby-starter-theme)
-
 ## 🧐 What's inside?
 
 1.  **`/content`**: A content folder holding assets that the blog and notes themes expect to exist. Check out the README for each theme to learn more about the demo content.
