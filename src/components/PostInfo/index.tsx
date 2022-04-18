@@ -1,14 +1,13 @@
-import * as React from "react"
-import { GatsbyImage } from "gatsby-plugin-image"
-import _ from "lodash"
+import * as React from "react";
+import {GatsbyImage} from "gatsby-plugin-image";
 
 type PostInfoProps = {
-  isPageTitle?: bool
-  title: string
-  date?: string
-  html: any
-  image?: any
-  className?: string
+  isPageTitle?: boolean;
+  title: string;
+  date?: string;
+  html: any;
+  image?: any;
+  className?: string;
 }
 
 const PostInfo: React.FunctionComponent<PostInfoProps> = ({
@@ -20,18 +19,18 @@ const PostInfo: React.FunctionComponent<PostInfoProps> = ({
   className,
   ...props
 }) => {
-  const addClass: string[] = ["single"]
+  const addClass: string[] = ["single"];
   let postTitle;
 
   if (className) {
-    addClass.push(className)
+    addClass.push(className);
   }
 
   
   if (isPageTitle) {
-    postTitle = <h1 className="post-title">{title}</h1>
+    postTitle = <h1 className="post-title">{title}</h1>;
   } else {
-    postTitle = <p className="post-title">{title}</p>
+    postTitle = <p className="post-title">{title}</p>;
   }
 
   return (
@@ -43,9 +42,9 @@ const PostInfo: React.FunctionComponent<PostInfoProps> = ({
             <GatsbyImage image={image.childImageSharp.gatsbyImageData} alt="" />
           </div>
         )}
-      <div className="post-content" dangerouslySetInnerHTML={{ __html: html }} />
+      <div className="post-content" dangerouslySetInnerHTML={{__html: html}} />
     </article>
-  )
-}
+  );
+};
 
-export default PostInfo
+export default PostInfo;

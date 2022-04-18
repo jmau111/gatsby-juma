@@ -1,12 +1,11 @@
-const path = require(`path`)
-const _ = require('lodash')
-const { createFilePath } = require(`gatsby-source-filesystem`)
+const path = require(`path`);
+const {createFilePath} = require(`gatsby-source-filesystem`);
 
-exports.createPages = ({ graphql, actions }) => {
-  const { createPage } = actions
+exports.createPages = ({graphql, actions}) => {
+  const {createPage} = actions;
 
-  const Post = path.resolve(`./src/views/post.tsx`)
-  const List = path.resolve(`./src/views/list.tsx`)
+  const Post = path.resolve(`./src/views/post.tsx`);
+  const List = path.resolve(`./src/views/list.tsx`);
   
   return graphql(
     `
@@ -30,14 +29,14 @@ exports.createPages = ({ graphql, actions }) => {
     `
   ).then(result => {
     if (result.errors) {
-      throw result.errors
+      throw result.errors;
     }
 
-    const posts = result.data.allMarkdownRemark.edges
+    const posts = result.data.allMarkdownRemark.edges;
 
     posts.forEach((post, index) => {
-      const previous = index === posts.length - 1 ? null : posts[index + 1].node
-      const next = index === 0 ? null : posts[index - 1].node
+      const previous = index === posts.length - 1 ? null : posts[index + 1].node;
+      const next = index === 0 ? null : posts[index - 1].node;
 
       createPage({
         path: post.node.fields.slug,
@@ -48,15 +47,15 @@ exports.createPages = ({ graphql, actions }) => {
           next,
           tag: post.node.frontmatter.tags,
         },
-      })
-    })
+      });
+    });
 
-    const postsPerPage = 6
-    const numPages = Math.ceil(posts.length / postsPerPage)
+    const postsPerPage = 6;
+    const numPages = Math.ceil(posts.length / postsPerPage);
 
-    Array.from({ length: numPages }).forEach((_, i) => {
+    Array.from({length: numPages}).forEach((_, i) => {
       createPage({
-        path: i === 0 ? `/page/1` : `/page/${i + 1}`,
+        path: i === 0 ? `/posts/` : `/posts/page/${i + 1}`,
         component: List,
         context: {
           limit: postsPerPage,
@@ -64,15 +63,15 @@ exports.createPages = ({ graphql, actions }) => {
           numPages,
           currentPage: i + 1,
         },
-      })
-    })
+      });
+    });
 
-    return null
-  })
-}
+    return null;
+  });
+};
 
-exports.onCreateNode = ({ node, actions, getNode }) => {
-  const { createNodeField } = actions
+exports.onCreateNode = ({node, actions, getNode}) => {
+  const {createNodeField} = actions;
 
   if (node.internal.type === `MarkdownRemark`) {
     if (typeof node.frontmatter.slug !== 'undefined') {
@@ -80,14 +79,14 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
         node,
         name: 'slug',
         value: node.frontmatter.slug,
-      })
+      });
     } else {
-      const value = createFilePath({ node, getNode })
+      const value = createFilePath({node, getNode});
       createNodeField({
         node,
         name: 'slug',
         value,
-      })
+      });
     }
   }
-}
+};

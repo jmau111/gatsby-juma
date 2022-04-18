@@ -1,15 +1,12 @@
-import React from "react"
-import { graphql } from "gatsby"
-import _ from "lodash"
-import Layout from "../components/layout"
-import SEO from "../components/seo"
-import PostInfo from "../components/PostInfo"
+import React from "react";
+import {graphql} from "gatsby";
+import Layout from "../components/layout";
+import SEO from "../components/seo";
+import PostInfo from "../components/PostInfo";
 
 const PostTemplate = (props: any) => {
-  const post = props.data.markdownRemark
-  const slug = post.fields.slug
-  const siteUrl = props.data.site.siteMetadata.siteUrl
-  const {date, title, description, image } = post.frontmatter
+  const post = props.data.markdownRemark;
+  const {date, title, description, image} = post.frontmatter;
 
   return (
     <Layout className="single">
@@ -22,10 +19,10 @@ const PostTemplate = (props: any) => {
         image={image}
       />
     </Layout>
-  )
-}
+  );
+};
 
-export default PostTemplate
+export default PostTemplate;
 
 export const pageQuery = graphql`
   query PostBySlug($slug: String!) {
@@ -53,4 +50,4 @@ export const pageQuery = graphql`
       }
     }
   }
-`
+`;

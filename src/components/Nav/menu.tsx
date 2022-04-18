@@ -1,15 +1,15 @@
-import React from "react"
-import { Link } from "gatsby"
+import React from "react";
+import {Link} from "gatsby";
 
 type MenuProps = {
-  items: MenuItemsProps[]
-  className?: string
+  items: MenuItemsProps[];
+  className?: string;
 }
 
 type MenuItemsProps = {
-  url: string
-  text: string
-  external?: boolean
+  url: string;
+  text: string;
+  external?: boolean;
 }
 
 const Menu: React.FunctionComponent<MenuProps> = ({
@@ -18,11 +18,10 @@ const Menu: React.FunctionComponent<MenuProps> = ({
   ...props
 }) => {
   
-  const customClasses = ["menu"]
-
+  const customClasses = ["menu"];
 
   if (className) {
-    customClasses.push(className)
+    customClasses.push(className);
   }
 
   return (
@@ -39,7 +38,7 @@ const Menu: React.FunctionComponent<MenuProps> = ({
         </li>
       ))}
     </ul>
-  )
-}
+  );
+};
 
-export default Menu
+export default Menu;

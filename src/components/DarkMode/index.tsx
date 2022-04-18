@@ -1,16 +1,14 @@
-import * as React from "react"
-import { ThemeToggler } from 'gatsby-plugin-dark-mode'
+import * as React from "react";
+import {ThemeToggler} from "gatsby-plugin-dark-mode";
 
 type DarkModeProps = {
-    children: React.ReactNode,
-    theme: string,
-    toggleTheme: any,
+    children?: React.ReactNode;
 }
 
 const DarkMode: React.FunctionComponent<DarkModeProps> = () => {
     return (
         <ThemeToggler>
-            {({ theme, toggleTheme }: DarkModeProps) => (
+            {({ theme, toggleTheme }) => (
                 <label className="toggle">
                     <input
                         aria-label="Toggle dark mode"
@@ -34,7 +32,8 @@ const DarkMode: React.FunctionComponent<DarkModeProps> = () => {
                     }
                 </label>
             )}
-        </ThemeToggler>)
-}
+        </ThemeToggler>
+    );
+};
 
-export default DarkMode
+export default DarkMode;

@@ -1,6 +1,6 @@
 require('dotenv').config({
   path: `.env.${process.env.NODE_ENV}`,
-})
+});
 
 module.exports = {
   pathPrefix: `/gatsby-juma`,
@@ -126,7 +126,7 @@ module.exports = {
         ref: 'id',
         index: ['title', 'body'],
         store: ['id', 'path', 'title'],
-        normalizer: ({ data }) =>
+        normalizer: ({data}) =>
           data.allMarkdownRemark.nodes.map((node) => ({
             id: node.id,
             path: node.fields.slug,
@@ -136,4 +136,4 @@ module.exports = {
       },
     },
   ],
-}
+};

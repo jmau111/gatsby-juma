@@ -1,12 +1,12 @@
-import * as React from "react"
-import { Link } from "gatsby"
-import _ from "lodash"
+import * as React from "react";
+import {Link} from "gatsby";
+
 interface ImageProps {
-  imageUrl: string
-  title: string
-  url: string
-  className?: string
-  readTime?: string
+  imageUrl: string;
+  title?: string;
+  url: string;
+  className?: string;
+  readTime?: string;
 }
 
 const ImageLink: React.FunctionComponent<ImageProps> = ({
@@ -15,10 +15,10 @@ const ImageLink: React.FunctionComponent<ImageProps> = ({
   className,
   ...props
 }) => {
-  const addClass = ["card__image"]
+  const addClass = ["card__image"];
 
   if (className) {
-    addClass.push(className)
+    addClass.push(className);
   }
 
   return (
@@ -31,7 +31,7 @@ const ImageLink: React.FunctionComponent<ImageProps> = ({
       className={addClass.join(" ")} {...props}>
       <Link className="card__link" to={url} aria-label="Read more"></Link>
     </div>
-  )
-}
+  );
+};
 
-export default ImageLink
+export default ImageLink;

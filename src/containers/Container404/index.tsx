@@ -1,25 +1,7 @@
-import * as React from "react"
-import { useStaticQuery, graphql, Link } from "gatsby"
+import * as React from "react";
+import {Link} from "gatsby";
 
-interface Container404Props { }
-
-const Container404: React.FunctionComponent<Container404Props> = props => {
-  const Data = useStaticQuery(graphql`
-    query {
-      avatar: file(absolutePath: { regex: "/404.png/" }) {
-        childImageSharp {
-          gatsbyImageData(layout: FULL_WIDTH)
-        }
-      }
-      site {
-        siteMetadata {
-          author
-          about
-        }
-      }
-    }
-  `)
-
+const Container404 = () => {
   return (
     <>
       <main className="main">
@@ -32,7 +14,7 @@ const Container404: React.FunctionComponent<Container404Props> = props => {
           </Link>
       </main>
     </>
-  )
-}
+  );
+};
 
-export default Container404
+export default Container404;

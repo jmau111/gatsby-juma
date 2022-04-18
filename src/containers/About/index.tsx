@@ -1,8 +1,6 @@
-import * as React from "react"
+import * as React from "react";
 
-interface AboutProps { }
-
-const About: React.FunctionComponent<AboutProps> = props => {
+const About = () => {
 
   return (
     <>
@@ -18,7 +16,7 @@ const About: React.FunctionComponent<AboutProps> = props => {
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas dignissim lacinia metus et feugiat. Suspendisse rhoncus ornare enim, vitae dapibus felis blandit vel. Aliquam erat volutpat. Etiam in venenatis ipsum. Etiam quis posuere augue, nec vehicula ante. Morbi felis nunc, ornare eget orci et, ornare facilisis lacus. Suspendisse potenti. In quis ligula a lacus venenatis porttitor.
       </p>
     </>
-  )
-}
+  );
+};
 
-export default About
+export default About;

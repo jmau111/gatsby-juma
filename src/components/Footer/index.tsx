@@ -1,7 +1,7 @@
-import * as React from "react"
+import * as React from "react";
 
 type FooterProps = {
-  children: React.ReactNode
+  children?: React.ReactNode;
 }
 
 const Footer: React.FunctionComponent<FooterProps> = ({
@@ -14,7 +14,7 @@ const Footer: React.FunctionComponent<FooterProps> = ({
         Gatsby Juma
       </a>
       {children}
-  </footer>
-}
+  </footer>;
+};
 
-export default Footer
+export default Footer;

@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Link } from 'gatsby';
+import {Link} from 'gatsby';
 
 type PaginationProps = {
   prevLink?: string | undefined | null | boolean;

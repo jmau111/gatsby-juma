@@ -1,4 +1,5 @@
-import Typography from "typography"
+import Typography from "typography";
+
 const typography = new Typography({
   baseFontSize: "22px",
   baseLineHeight: 1.667,
@@ -11,5 +12,5 @@ const typography = new Typography({
     "sans-serif",
   ],
   bodyFontFamily: ["Palatino", "Georgia", "sans-serif"],
-})
-export default typography
+});
+export default typography;

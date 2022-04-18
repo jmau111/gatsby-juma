@@ -1,11 +1,9 @@
-import React from "react"
-import Layout from "../components/layout"
-import SEO from "../components/seo"
-import About from "../containers/About"
+import React from "react";
+import Layout from "../components/layout";
+import SEO from "../components/seo";
+import About from "../containers/About";
 
-type AboutPageProps = {}
-
-const AboutPage: React.FunctionComponent<AboutPageProps> = (props) => {
+const AboutPage = () => {
   return (
     <Layout className="about">
       <SEO
@@ -14,7 +12,7 @@ const AboutPage: React.FunctionComponent<AboutPageProps> = (props) => {
       />
       <About />
     </Layout>
-  )
-}
+  );
+};
 
-export default AboutPage
+export default AboutPage;

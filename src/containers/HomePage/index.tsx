@@ -1,10 +1,8 @@
-import * as React from "react"
-import { useStaticQuery, graphql } from "gatsby"
-import Posts from "./Posts"
+import * as React from "react";
+import {useStaticQuery, graphql} from "gatsby";
+import Posts from "./Posts";
 
-type BlogProps = {}
-
-const Blog: React.FunctionComponent<BlogProps> = ({
+const Blog = ({
   ...props
 }) => {
 
@@ -27,7 +25,7 @@ const Blog: React.FunctionComponent<BlogProps> = ({
       </section>
       <Posts />
     </>
-  )
-}
+  );
+};
 
-export default Blog
+export default Blog;

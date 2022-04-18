@@ -9,6 +9,23 @@ Featured images for posts are mandatory for now.
 
 You can customize fonts here `./src/utils/typography.js`.
 
+## Typing and linting
+
+```
+yarn type-check
+```
+
+### Lint
+
+```
+yarn lint
+```
+
+### Automatically fix lint errors
+```
+yarn lint --fix
+```
+
 ## 🎃 Change styles
 
 If you know what you're doing, you can tweak stylews in `./src/styles`. The theme does not use styled components but basic CSS that I hook (~ add) in `./gatsby-browser.js`.

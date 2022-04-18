@@ -1,12 +1,12 @@
-import React from "react"
-import { Link } from "gatsby"
-import Menu from "./menu"
-import DarkMode from "../DarkMode"
-import SearchBar from "../SearchBar"
-import Logo from "../../../images/logo.png"
+import React from "react";
+import {Link} from "gatsby";
+import Menu from "./menu";
+import DarkMode from "../DarkMode";
+import SearchBar from "../SearchBar";
+import Logo from "../../../images/logo.png";
 
 type NavProps = {
-  className?: string
+  className?: string;
 }
 
 const MenuItems = [
@@ -18,17 +18,17 @@ const MenuItems = [
     text: "About",
     url: "/about",
   },
-]
+];
 
 const Nav: React.FunctionComponent<NavProps> = ({
   className,
   ...props
 }) => {
 
-  const customClasses = ["header"]
+  const customClasses = ["header"];
 
   if (className) {
-    customClasses.push(className)
+    customClasses.push(className);
   }
 
   const [isActive, setActive] = React.useState<boolean>(false);
@@ -57,7 +57,7 @@ const Nav: React.FunctionComponent<NavProps> = ({
         </div>
       </nav>
     </header>
-  )
-}
+  );
+};
 
-export default Nav
+export default Nav;

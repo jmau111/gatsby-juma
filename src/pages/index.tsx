@@ -1,11 +1,11 @@
-import React from "react"
-import { graphql } from "gatsby"
-import Layout from "../components/layout"
-import Blog from "../containers/HomePage"
-import SEO from "../components/seo"
+import React from "react";
+import {graphql} from "gatsby";
+import Layout from "../components/layout";
+import Blog from "../containers/HomePage";
+import SEO from "../components/seo";
 
 const BlogPage = (props: any) => {
-  const { data } = props
+  const {data} = props;
 
   return (
     <Layout className="home">
@@ -15,10 +15,10 @@ const BlogPage = (props: any) => {
       />
       <Blog />
     </Layout>
-  )
-}
+  );
+};
 
-export default BlogPage
+export default BlogPage;
 
 export const pageQuery = graphql`
   query {
@@ -29,4 +29,4 @@ export const pageQuery = graphql`
       }
     }
   }
-`
+`;
