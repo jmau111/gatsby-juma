@@ -19,7 +19,7 @@
     "gatsby-plugin-react-helmet": "^5.9.0",
     "gatsby-plugin-sharp": "^4.9.1",
     "gatsby-plugin-typography": "^4.10.0",
-    "gatsby-remark-images": "^6.8.1",
+    "gatsby-remark-images": "^6.12.1",
     "gatsby-remark-smartypants": "^5.11.0",
     "gatsby-source-filesystem": "^4.11.1",
     "gatsby-transformer-remark": "^5.11.1",
