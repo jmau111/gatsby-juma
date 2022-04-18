@@ -5,7 +5,7 @@ type PostInfoProps = {
   isPageTitle?: boolean
   title: string
   date?: string
-  html: string
+  html: any
   image?: any
   className?: string
 }

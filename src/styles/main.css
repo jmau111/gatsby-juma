@@ -446,15 +446,6 @@ p {
     text-decoration: underline;
 }
 
-.scroll-top {
-    display: block;
-    width: 0;
-    height: 0;
-    border-width: 0 13px 22.5px 13px;
-    border-color: transparent transparent var(--color) transparent;
-    border-style: solid;
-}
-
 .footer {
     border-top: thin solid var(--border-color);
     margin: 4rem auto 0;

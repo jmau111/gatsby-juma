@@ -3,6 +3,7 @@ import { Link } from "gatsby"
 import Menu from "./menu"
 import DarkMode from "../DarkMode"
 import SearchBar from "../SearchBar"
+/* eslint-disable */
 import Logo from "../../../images/logo.png"
 
 type NavProps = {

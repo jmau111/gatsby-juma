@@ -18,16 +18,17 @@ const SearchBar = () => {
   `)
 
   const initialValues: SearchBarProps = { query: `` }
-  const [query, setQuery] = useState(null)
+  const [query, setQuery] = useState(``)
   const results = useFlexSearch(query, Data?.localSearchPages?.index, Data?.localSearchPages?.store)
-  const noResult = query !== null && results.length === 0
+  const noResult = query !== undefined && query !== `` && results.length === 0
 
   return (
     <div className="search">
       <Formik
         initialValues={initialValues}
         onSubmit={(values, { setSubmitting }) => {
-          setQuery(values.query)
+          const v = values.query!
+          setQuery(v)
           setSubmitting(false)
         }}
       >
@@ -57,7 +58,7 @@ const SearchBar = () => {
       <div className="search__results">
         <ul>
           {results.length > 0 &&
-            results.map(r => (
+            results.map((r: any) => (
               <li key={r.id}>
                 <Link className="search__link" to={r?.path}>
                   <svg

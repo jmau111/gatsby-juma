@@ -3,7 +3,7 @@ import { Link } from "gatsby"
 
 type ImageProps = {
   imageUrl: string
-  title: string
+  title?: string
   url: string
   className?: string
   readTime?: string

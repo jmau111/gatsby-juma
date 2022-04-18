@@ -1,15 +1,10 @@
 import React from "react"
-import { useStaticQuery, Link, graphql, PageProps } from "gatsby"
+import { useStaticQuery, Link, graphql } from "gatsby"
 import ImageLink from "../../../components/ImageLink"
 
 const Posts = () => {
   const Data = useStaticQuery(graphql`
     query {
-      site {
-        siteMetadata {
-          title
-        }
-      }
       allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
         edges {
           node {
@@ -33,36 +28,14 @@ const Posts = () => {
     }
   `)
 
-  type DataProps = {
-    site: {
-      siteMetadata: {
-        title: string
-      }
-    }
-    allMarkdownRemark: {
-      edges: {
-        node: {
-          fields: {
-            slug: string
-          }
-          frontmatter: {
-            date: string
-            title: string
-            description: string
-            image?: any
-          }
-        }
-      }
-    }
-  }
-
   const Posts = Data.allMarkdownRemark.edges
+  const LastPosts = Posts.slice(0, 3)
 
   return (
     <section className="last-posts">
       <h2 className="shadowed border">Last posts</h2>
       <ul>
-        {Posts.slice(0, 3).map(({ node }: PageProps<DataProps>) => {
+        {LastPosts.map(({ node }: any) => {
           const title = node.frontmatter.title || node.fields.slug
           return (
             <li className="card" key={node.fields.slug}>

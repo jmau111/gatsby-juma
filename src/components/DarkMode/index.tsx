@@ -4,7 +4,7 @@ import { ThemeToggler } from "gatsby-plugin-dark-mode"
 const DarkMode = () => {
   return (
     <ThemeToggler>
-      {({ theme, toggleTheme }) => (
+      {({ theme, toggleTheme }: any) => (
         <label className="toggle">
           <input
             aria-label="Toggle dark mode"

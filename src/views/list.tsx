@@ -1,35 +1,11 @@
 import * as React from "react"
-import { Link, graphql, PageProps } from "gatsby"
+import { Link, graphql } from "gatsby"
 import Pagination from "../components/Pagination"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
-type DataProps = {
-  pageContext: {
-    currentPage: number
-    numPages: number
-  }
-  allMarkdownRemark: {
-    edges: {
-      node: {
-        excerpt?: string
-        fields: {
-          slug: string
-        }
-        frontmatter: {
-          date: string
-          title: string
-          description: string
-          image?: any
-        }
-      }
-    }
-  }
-}
-
-const BlogList = ({ pageContext, data: { allMarkdownRemark } }: PageProps<DataProps>) => {
+const BlogList = ({ pageContext: { currentPage, numPages }, data: { allMarkdownRemark } }: any) => {
   const Posts = allMarkdownRemark.edges
-  const { currentPage, numPages } = pageContext
   const isFirst = currentPage === 1
   const isLast = currentPage === numPages
   const prevPage = currentPage - 1 === 1 ? `/posts` : `/posts/page/${(currentPage - 1).toString()}`
@@ -39,17 +15,18 @@ const BlogList = ({ pageContext, data: { allMarkdownRemark } }: PageProps<DataPr
 
   return (
     <Layout className="listing">
-      <SEO title={`Page ${currentPage}`} />
-      {Posts.map(({ node }: any) => {
-        return (
-          <article className="post-item" key={node.fields.slug}>
-            <time className="post-date">{node.frontmatter.date}</time>
-            <Link className="post-title" to={node.fields.slug}>
-              {node.frontmatter.title}
-            </Link>
-          </article>
-        )
-      })}
+      <SEO title={numPages > 1 ? `Posts Page ${currentPage}` : `Posts`} />
+      {Posts instanceof Array &&
+        Posts.map(({ node }: any) => {
+          return (
+            <article className="post-item" key={node.fields.slug}>
+              <time className="post-date">{node.frontmatter.date}</time>
+              <Link className="post-title" to={node.fields.slug}>
+                {node.frontmatter.title}
+              </Link>
+            </article>
+          )
+        })}
       {numPages > 1 && (
         <Pagination prevLink={PrevLink} nextLink={NextLink} currentPage={`${currentPage}`} totalPage={`${numPages}`} />
       )}

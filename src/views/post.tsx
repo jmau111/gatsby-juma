@@ -6,7 +6,7 @@ import PostInfo from "../components/PostInfo"
 
 type DataProps = {
   markdownRemark: {
-    html?: string
+    html?: any
     excerpt?: string
     frontmatter: {
       date: string
