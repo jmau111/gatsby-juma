@@ -12,21 +12,15 @@ type MenuItemsProps = {
   external?: boolean
 }
 
-const Menu: React.FunctionComponent<MenuProps> = ({
-  items,
-  className,
-  ...props
-}) => {
-  
-  const customClasses = ["menu"]
-
+const Menu: React.FunctionComponent<MenuProps> = ({ items, className, ...props }) => {
+  const customClasses = [`menu`]
 
   if (className) {
     customClasses.push(className)
   }
 
   return (
-    <ul className={customClasses.join(" ")} {...props}>
+    <ul className={customClasses.join(` `)} {...props}>
       {items.map((item, index) => (
         <li key={index}>
           {item.external ? (

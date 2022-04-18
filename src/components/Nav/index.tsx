@@ -11,36 +11,32 @@ type NavProps = {
 
 const MenuItems = [
   {
-    text: "Home",
-    url: "/",
+    text: `Home`,
+    url: `/`,
   },
   {
-    text: "About",
-    url: "/about",
+    text: `About`,
+    url: `/about`,
   },
 ]
 
-const Nav: React.FunctionComponent<NavProps> = ({
-  className,
-  ...props
-}) => {
-
-  const customClasses = ["header"]
+const Nav: React.FunctionComponent<NavProps> = ({ className, ...props }) => {
+  const customClasses = [`header`]
 
   if (className) {
     customClasses.push(className)
   }
 
-  const [isActive, setActive] = React.useState<boolean>(false);
+  const [isActive, setActive] = React.useState<boolean>(false)
 
   const handleToggle = () => {
-    setActive(!isActive);
-  };
+    setActive(!isActive)
+  }
 
-  const state = isActive ? "show" : "hide";
+  const state = isActive ? `show` : `hide`
 
   return (
-    <header className={customClasses.join(" ")} {...props}>
+    <header className={customClasses.join(` `)} {...props}>
       <nav className="navbar">
         <Link to="/">
           <img className="logo" src={Logo} width="42" height="42" alt="" />
@@ -50,7 +46,7 @@ const Nav: React.FunctionComponent<NavProps> = ({
         <button type="button" aria-label="toggle menu" className="bars-container" onClick={handleToggle}>
           <span className="bars" aria-hidden="true"></span>
         </button>
-        <div className={"navbar__container" + " " + state}>
+        <div className={`navbar__container` + ` ` + state}>
           <Menu items={MenuItems} />
           <SearchBar />
           <DarkMode />

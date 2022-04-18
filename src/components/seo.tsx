@@ -5,18 +5,12 @@ import { useStaticQuery, graphql } from "gatsby"
 type SEOProps = {
   description?: string
   lang?: string
-  meta?: any
-  keywords?: any
+  meta?: any[]
+  keywords?: any[]
   title: string
 }
 
-const SEO: React.FunctionComponent<SEOProps> = ({
-  description,
-  lang,
-  meta,
-  keywords,
-  title,
-}) => {
+const SEO: React.FunctionComponent<SEOProps> = ({ description, lang, meta, keywords, title }) => {
   const { site } = useStaticQuery(
     graphql`
       query {
@@ -74,14 +68,7 @@ const SEO: React.FunctionComponent<SEOProps> = ({
           content: metaDescription,
         },
       ]
-        .concat(
-          keywords.length > 0
-            ? {
-                name: `keywords`,
-                content: keywords.join(`, `),
-              }
-            : []
-        )
+        .concat(keywords.length > 0 ? { name: `keywords`, content: keywords.join(`, `) } : [])
         .concat(meta)}
     />
   )

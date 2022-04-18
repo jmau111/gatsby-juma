@@ -1,13 +1,13 @@
-import * as React from 'react';
-import { Link } from 'gatsby';
+import * as React from "react"
+import { Link } from "gatsby"
 
 type PaginationProps = {
-  prevLink?: string | undefined | null | boolean;
-  nextLink?: string | undefined | null | boolean;
-  currentPage: string;
-  totalPage: string;
-  className?: string;
-};
+  prevLink?: string | undefined | null | boolean
+  nextLink?: string | undefined | null | boolean
+  currentPage: string
+  totalPage: string
+  className?: string
+}
 
 const Pagination: React.FunctionComponent<PaginationProps> = ({
   prevLink,
@@ -37,7 +37,7 @@ const Pagination: React.FunctionComponent<PaginationProps> = ({
         )}
       </li>
     </ul>
-  );
-};
+  )
+}
 
-export default Pagination;
+export default Pagination

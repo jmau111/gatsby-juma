@@ -1,7 +1,3 @@
-require('dotenv').config({
-  path: `.env.${process.env.NODE_ENV}`,
-})
-
 module.exports = {
   pathPrefix: `/gatsby-juma`,
   siteMetadata: {
@@ -102,11 +98,11 @@ module.exports = {
       resolve: `gatsby-plugin-dark-mode`,
     },
     {
-      resolve: 'gatsby-plugin-local-search',
+      resolve: `gatsby-plugin-local-search`,
       options: {
-        name: 'pages',
-        engine: 'flexsearch',
-        engineOptions: 'speed',
+        name: `pages`,
+        engine: `flexsearch`,
+        engineOptions: `speed`,
         query: `
           {
             allMarkdownRemark {
@@ -123,11 +119,11 @@ module.exports = {
             }
           }
         `,
-        ref: 'id',
-        index: ['title', 'body'],
-        store: ['id', 'path', 'title'],
+        ref: `id`,
+        index: [`title`, `body`],
+        store: [`id`, `path`, `title`],
         normalizer: ({ data }) =>
-          data.allMarkdownRemark.nodes.map((node) => ({
+          data.allMarkdownRemark.nodes.map(node => ({
             id: node.id,
             path: node.fields.slug,
             title: node.frontmatter.title,

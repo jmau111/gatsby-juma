@@ -1,11 +1,10 @@
 import React from "react"
-import { graphql } from "gatsby"
 import Nav from "../components/Nav"
 import SEO from "../components/seo"
 import Container404 from "../containers/Container404"
 import Footer from "../components/Footer"
 
-const Page404 = (props: any) => {
+const Page404 = () => {
   return (
     <>
       <Nav />
@@ -17,13 +16,3 @@ const Page404 = (props: any) => {
 }
 
 export default Page404
-
-export const pageQuery = graphql`
-  query {
-    site {
-      siteMetadata {
-        title
-      }
-    }
-  }
-`

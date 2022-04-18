@@ -1,5 +1,5 @@
+/* eslint-disable */
 const path = require(`path`)
-const _ = require('lodash')
 const { createFilePath } = require(`gatsby-source-filesystem`)
 
 exports.createPages = ({ graphql, actions }) => {
@@ -7,14 +7,11 @@ exports.createPages = ({ graphql, actions }) => {
 
   const Post = path.resolve(`./src/views/post.tsx`)
   const List = path.resolve(`./src/views/list.tsx`)
-  
+
   return graphql(
     `
       {
-        allMarkdownRemark(
-          sort: { fields: [frontmatter___date], order: DESC }
-          limit: 1000
-        ) {
+        allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }, limit: 1000) {
           edges {
             node {
               fields {
@@ -56,7 +53,7 @@ exports.createPages = ({ graphql, actions }) => {
 
     Array.from({ length: numPages }).forEach((_, i) => {
       createPage({
-        path: i === 0 ? `/page/1` : `/page/${i + 1}`,
+        path: i === 0 ? `/posts/` : `/posts/page/${i + 1}`,
         component: List,
         context: {
           limit: postsPerPage,
@@ -75,17 +72,17 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
   const { createNodeField } = actions
 
   if (node.internal.type === `MarkdownRemark`) {
-    if (typeof node.frontmatter.slug !== 'undefined') {
+    if (typeof node.frontmatter.slug !== `undefined`) {
       createNodeField({
         node,
-        name: 'slug',
+        name: `slug`,
         value: node.frontmatter.slug,
       })
     } else {
       const value = createFilePath({ node, getNode })
       createNodeField({
         node,
-        name: 'slug',
+        name: `slug`,
         value,
       })
     }

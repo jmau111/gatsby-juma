@@ -1,12 +1,11 @@
 import * as React from "react"
 import { GatsbyImage } from "gatsby-plugin-image"
-import _ from "lodash"
 
 type PostInfoProps = {
-  isPageTitle?: bool
+  isPageTitle?: boolean
   title: string
   date?: string
-  html: any
+  html: string
   image?: any
   className?: string
 }
@@ -20,14 +19,13 @@ const PostInfo: React.FunctionComponent<PostInfoProps> = ({
   className,
   ...props
 }) => {
-  const addClass: string[] = ["single"]
-  let postTitle;
+  const addClass: string[] = [`single`]
+  let postTitle
 
   if (className) {
     addClass.push(className)
   }
 
-  
   if (isPageTitle) {
     postTitle = <h1 className="post-title">{title}</h1>
   } else {
@@ -35,14 +33,14 @@ const PostInfo: React.FunctionComponent<PostInfoProps> = ({
   }
 
   return (
-    <article {...props} className={addClass.join(" ")}>
+    <article {...props} className={addClass.join(` `)}>
       {postTitle}
       <time className="post-date">{date}</time>
       {image == null ? null : (
-          <div className="post-image">
-            <GatsbyImage image={image.childImageSharp.gatsbyImageData} alt="" />
-          </div>
-        )}
+        <div className="post-image">
+          <GatsbyImage image={image.childImageSharp.gatsbyImageData} alt="" />
+        </div>
+      )}
       <div className="post-content" dangerouslySetInnerHTML={{ __html: html }} />
     </article>
   )

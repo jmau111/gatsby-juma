@@ -1,26 +1,30 @@
 import React from "react"
-import { graphql } from "gatsby"
-import _ from "lodash"
+import { PageProps, graphql } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import PostInfo from "../components/PostInfo"
 
-const PostTemplate = (props: any) => {
-  const post = props.data.markdownRemark
-  const slug = post.fields.slug
-  const siteUrl = props.data.site.siteMetadata.siteUrl
-  const {date, title, description, image } = post.frontmatter
+type DataProps = {
+  markdownRemark: {
+    html?: string
+    excerpt?: string
+    frontmatter: {
+      date: string
+      title: string
+      description: string
+      image?: any
+    }
+  }
+}
+
+const PostTemplate = ({ data: { markdownRemark } }: PageProps<DataProps>) => {
+  const { html, frontmatter, excerpt } = markdownRemark
+  const { date, title, description, image } = frontmatter
 
   return (
     <Layout className="single">
-      <SEO title={title} description={description || post.excerpt} />
-      <PostInfo
-        title={title}
-        isPageTitle={true}
-        date={date}
-        html={post.html}
-        image={image}
-      />
+      <SEO title={title} description={description || excerpt} />
+      <PostInfo title={title} isPageTitle={true} date={date} html={html} image={image} />
     </Layout>
   )
 }

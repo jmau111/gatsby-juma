@@ -21,6 +21,10 @@ git clone https://github.com/jmau111/gatsby-juma.git and cd gatsby-juma && yarn 
 
 Then customize the favicon in `./images/`.
 
+## Archive pages
+
+There's a default `/posts/` page with all posts and pagination. You have to manually rename it in files for now if you don't want this URL.
+
 ## Change siteURL
 
 Open `./gatsby-config.js` and modify:
