@@ -28,12 +28,10 @@ body.dark {
 }
 
 .dark img {
-    -webkit-filter: brightness(.8)contrast(1.2);
     filter: brightness(.8)contrast(1.2);
 }
 
 body {
-    -webkit-font-smoothing: antialiased;
     color: var(--color);
     background: var(--bg-color);
     background: -o-linear-gradient(var(--bg-color-gradient) 0%, var(--bg-color) 20%);
@@ -50,15 +48,12 @@ body {
 a {
     color: var(--link-color);
     text-decoration: none;
-    -webkit-transition: all 0.3s ease-out;
-    -o-transition: all 0.3s ease-out;
     transition: all 0.3s ease-out;
 }
 
 .screen-reader-text {
     border: 0;
     clip: rect(1px, 1px, 1px, 1px);
-    -webkit-clip-path: inset(50%);
     clip-path: inset(50%);
     height: 1px;
     margin: -1px;
@@ -72,7 +67,6 @@ a {
 .screen-reader-text:focus {
     background-color: #eee;
     clip: auto !important;
-    -webkit-clip-path: none;
     clip-path: none;
     color: #444;
     display: block;
@@ -147,14 +141,8 @@ a {
 .search__form {
     margin: 0;
     padding: 0;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
     align-items: center;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
     justify-content: center;
     gap: 1rem;
 }
@@ -172,8 +160,6 @@ a {
 
 .search__submit {
     cursor: pointer;
-    -webkit-appearance: none;
-    -moz-appearance: none;
     appearance: none;
     background-color: transparent;
     border: 0;
@@ -227,8 +213,6 @@ a {
 }
 
 .bars-container {
-    -webkit-appearance: none;
-    -moz-appearance: none;
     appearance: none;
     background: transparent;
     border: 0;
@@ -273,8 +257,8 @@ a {
 }
 
 .toggle input[type="checkbox"] {
-    -webkit-appearance: none;
     -webkit-tap-highlight-color: transparent;
+    -webkit-appearance: none;
     position: relative;
     border: 0;
     outline: 0;
@@ -301,13 +285,11 @@ a {
     top: 2px;
     border-radius: 50%;
     background: var(--color);
-    -webkit-box-shadow: 1px 1px 3px var(--shadow-color);
     box-shadow: 1px 1px 3px var(--shadow-color);
 }
 
 .toggle input[type="checkbox"]:checked:before {
     left: 22px;
-    -webkit-box-shadow: -1px 1px 3px var(--shadow-color);
     box-shadow: -1px 1px 3px var(--shadow-color);
 }
 
@@ -371,7 +353,6 @@ p {
 
 .last-posts>ul {
     margin-top: 2rem;
-    display: -ms-grid;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 1rem;
@@ -380,12 +361,7 @@ p {
 .card,
 .post-metadata {
     margin: 0;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
     flex-direction: column;
 }
 
@@ -407,7 +383,6 @@ p {
 }
 
 .card:hover .card__image {
-    -webkit-filter: grayscale(1);
     filter: grayscale(1);
 }
 
@@ -418,18 +393,12 @@ p {
 .card__image,
 .card__link {
     display: block;
-    -webkit-transition: all .5s;
-    -o-transition: all .5s;
     transition: all .5s;
     height: 100%;
 }
 
 .listing .post-item {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
     align-items: center;
     gap: 2rem;
 }
@@ -444,14 +413,8 @@ p {
     margin: 4rem auto 0;
     position: sticky;
     top: 100vh;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
     align-items: center;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
     justify-content: center;
     gap: .25rem;
     text-align: center;
@@ -477,11 +440,7 @@ p {
     }
 
     .show, .hide {
-        display: -webkit-box;
-        display: -ms-flexbox;
         display: flex;
-        -webkit-box-pack: end;
-        -ms-flex-pack: end;
         justify-content: end;
     }
 
@@ -490,14 +449,8 @@ p {
     }
 
     .navbar, .navbar__container {
-        display: -webkit-box;
-        display: -ms-flexbox;
         display: flex;
-        -webkit-box-align: center;
-        -ms-flex-align: center;
         align-items: center;
-        -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
         justify-content: space-between;
     }
 
@@ -506,17 +459,9 @@ p {
     }
 
     .menu {
-        -webkit-box-flex: 1;
-        -ms-flex-positive: 1;
         flex-grow: 1;
-        display: -webkit-box;
-        display: -ms-flexbox;
         display: flex;
-        -webkit-box-align: center;
-        -ms-flex-align: center;
         align-items: center;
-        -webkit-box-pack: end;
-        -ms-flex-pack: end;
         justify-content: end;
         gap: 0;
     }

@@ -25,6 +25,7 @@ module.exports = {
   },
   rules: {
     quotes: `off`,
+    "@typescript-eslint/no-var-requires": `off`,
     "@typescript-eslint/quotes": [
       2,
       `backtick`,

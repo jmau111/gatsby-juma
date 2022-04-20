@@ -1,3 +1,5 @@
+const autoprefixer = require(`autoprefixer`)
+
 module.exports = {
   pathPrefix: `/gatsby-juma`,
   siteMetadata: {
@@ -67,6 +69,16 @@ module.exports = {
           pngOptions: {},
           webpOptions: {},
           avifOptions: {},
+        },
+      },
+    },
+    {
+      resolve: `gatsby-plugin-postcss`,
+      options: {
+        cssLoaderOptions: {
+          exportLocalsConvention: false,
+          namedExport: false,
+          postCssPlugins: [autoprefixer()],
         },
       },
     },
