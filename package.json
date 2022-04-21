@@ -90,7 +90,7 @@
     "build": "gatsby build --prefix-paths",
     "lint:js": "eslint . --ignore-path .gitignore --ext .ts,.tsx,.js,.jsx --fix",
     "lint:css": "stylelint 'src/**/*.{css,scss,sass}' --fix",
-    "lint:all": "yarn lint:js --fix && yarn lint:css",
+    "lint:all": "yarn lint:js && yarn lint:css",
     "type-check": "tsc --noEmit",
     "postinstall": "husky install",
     "prepack": "pinst --disable",
