@@ -18,6 +18,10 @@ const MenuItems = [
   {
     text: `About`,
     url: `/about`,
+  },  
+  {
+    text: `Posts`,
+    url: `/posts`,
   },
 ]
 
