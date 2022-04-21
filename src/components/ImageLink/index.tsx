@@ -10,7 +10,7 @@ type ImageProps = {
 }
 
 const ImageLink: React.FunctionComponent<ImageProps> = ({ imageUrl, url, className, ...props }) => {
-  const addClass = [`card__image`]
+  const addClass = [`image`]
 
   if (className) {
     addClass.push(className)
@@ -27,7 +27,7 @@ const ImageLink: React.FunctionComponent<ImageProps> = ({ imageUrl, url, classNa
       className={addClass.join(` `)}
       {...props}
     >
-      <Link className="card__link" to={url} aria-label="Read more"></Link>
+      <Link className="link" to={url} aria-label="Read more"></Link>
     </div>
   )
 }

@@ -6,7 +6,7 @@ import SearchBar from "../SearchBar"
 /* eslint-disable */
 import Logo from "../../../images/logo.png"
 
-type NavProps = {
+type HeaderProps = {
   className?: string
 }
 
@@ -25,7 +25,7 @@ const MenuItems = [
   },
 ]
 
-const Nav: React.FunctionComponent<NavProps> = ({ className, ...props }) => {
+const Header: React.FunctionComponent<HeaderProps> = ({ className, ...props }) => {
   const customClasses = [`header`]
 
   if (className) {
@@ -61,4 +61,4 @@ const Nav: React.FunctionComponent<NavProps> = ({ className, ...props }) => {
   )
 }
 
-export default Nav
+export default Header

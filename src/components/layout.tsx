@@ -1,6 +1,6 @@
 import React from "react"
 import ScrollToTop from "react-scroll-up"
-import Nav from "./Nav"
+import Header from "./Header"
 import Footer from "./Footer"
 
 type LayoutProps = {
@@ -11,7 +11,7 @@ type LayoutProps = {
 const Layout: React.FunctionComponent<LayoutProps> = ({ children, className }) => {
   return (
     <div className={className}>
-      <Nav />
+      <Header className={`header__${className}`} />
       <main className="main">{children}</main>
       <Footer />
       <ScrollToTop
