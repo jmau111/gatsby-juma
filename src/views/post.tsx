@@ -1,18 +1,23 @@
 import React from "react"
 import { PageProps, graphql } from "gatsby"
+import { IGatsbyImageData } from "gatsby-plugin-image"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import PostInfo from "../components/PostInfo"
 
 type DataProps = {
   markdownRemark: {
-    html?: any
+    html: string
     excerpt?: string
     frontmatter: {
       date: string
       title: string
       description: string
-      image?: any
+      image: {
+        childImageSharp: {
+          gatsbyImageData: IGatsbyImageData
+        }
+      }
     }
   }
 }
