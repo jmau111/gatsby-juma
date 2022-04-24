@@ -7,6 +7,12 @@ interface Values {
   query: string
 }
 
+interface Post {
+  id: string
+  path: string
+  title?: string
+}
+
 const SearchBar = () => {
   const Data = useStaticQuery(graphql`
     {
@@ -58,9 +64,9 @@ const SearchBar = () => {
       <div className="search__results">
         <ul>
           {results.length > 0 &&
-            results.map((r: any) => (
+            results.map((r: Post) => (
               <li key={r.id}>
-                <Link className="search__link" to={r?.path}>
+                <Link className="search__link" to={r.path}>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="24"
