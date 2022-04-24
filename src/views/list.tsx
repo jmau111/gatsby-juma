@@ -4,7 +4,27 @@ import Pagination from "../components/Pagination"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
-const BlogList = ({ pageContext: { currentPage, numPages }, data: { allMarkdownRemark } }: any) => {
+interface Data {
+  pageContext: {
+    currentPage: number
+    numPages: number
+  }
+  data: {
+    allMarkdownRemark: {
+      edges: {
+        node: {
+          fields: {
+            slug: string
+          }
+          title?: string
+          date?: string
+        }
+      }
+    }
+  }
+}
+
+const BlogList = ({ pageContext: { currentPage, numPages }, data: { allMarkdownRemark } }: Data) => {
   const Posts = allMarkdownRemark.edges
   const isFirst = currentPage === 1
   const isLast = currentPage === numPages
