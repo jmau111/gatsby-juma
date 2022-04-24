@@ -24,6 +24,18 @@ interface Data {
   }
 }
 
+interface Node {
+  node: {
+    frontmatter: {
+      title?: string
+      date?: string
+    }
+    fields: {
+      slug: string
+    }
+  }
+}
+
 const BlogList = ({ pageContext: { currentPage, numPages }, data: { allMarkdownRemark } }: Data) => {
   const Posts = allMarkdownRemark.edges
   const isFirst = currentPage === 1
@@ -37,7 +49,7 @@ const BlogList = ({ pageContext: { currentPage, numPages }, data: { allMarkdownR
     <Layout className="listing">
       <SEO title={numPages > 1 ? `Posts Page ${currentPage}` : `Posts`} />
       {Posts instanceof Array &&
-        Posts.map(({ node }: any) => {
+        Posts.map(({ node }: Node) => {
           return (
             <article className="post-item" key={node.fields.slug}>
               <time className="post-date">{node.frontmatter.date}</time>
