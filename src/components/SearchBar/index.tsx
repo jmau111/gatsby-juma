@@ -1,10 +1,10 @@
 import React, { useState } from "react"
 import { useStaticQuery, graphql, Link } from "gatsby"
 import { useFlexSearch } from "react-use-flexsearch"
-import { Formik, Form, Field } from "formik"
+import { Formik, Form, Field, FormikHelpers } from "formik"
 
-type SearchBarProps = {
-  query?: string
+interface Values {
+  query: string
 }
 
 const SearchBar = () => {
@@ -17,7 +17,6 @@ const SearchBar = () => {
     }
   `)
 
-  const initialValues: SearchBarProps = { query: `` }
   const [query, setQuery] = useState(``)
   const results = useFlexSearch(query, Data?.localSearchPages?.index, Data?.localSearchPages?.store)
   const noResult = query !== undefined && query !== `` && results.length === 0
@@ -25,10 +24,11 @@ const SearchBar = () => {
   return (
     <div className="search">
       <Formik
-        initialValues={initialValues}
-        onSubmit={(values, { setSubmitting }) => {
-          const v = values.query!
-          setQuery(v)
+        initialValues={{
+          query: ``,
+        }}
+        onSubmit={(values, { setSubmitting }: FormikHelpers<Values>) => {
+          setQuery(values.query)
           setSubmitting(false)
         }}
       >
@@ -36,7 +36,7 @@ const SearchBar = () => {
           <label htmlFor="search-input" className="screen-reader-text">
             Enter search keywords
           </label>
-          <Field id="search-input" placeholder="Search..." className="search__input" name="query" />
+          <Field id="search-input" autocomplete="off" placeholder="Search..." className="search__input" name="query" />
           <button className="search__submit" type="submit">
             <svg
               xmlns="http://www.w3.org/2000/svg"
