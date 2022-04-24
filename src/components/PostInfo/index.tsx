@@ -1,12 +1,16 @@
 import * as React from "react"
-import { GatsbyImage } from "gatsby-plugin-image"
+import { GatsbyImage, IGatsbyImageData } from "gatsby-plugin-image"
 
 type PostInfoProps = {
   isPageTitle?: boolean
   title: string
   date?: string
-  html: any
-  image?: any
+  html: string
+  image?: {
+    childImageSharp: {
+      gatsbyImageData: IGatsbyImageData
+    }
+  }
   className?: string
 }
 
@@ -14,7 +18,7 @@ const PostInfo: React.FunctionComponent<PostInfoProps> = ({
   isPageTitle,
   title,
   date,
-  html,
+  html = ``,
   image,
   className,
   ...props

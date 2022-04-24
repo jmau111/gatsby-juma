@@ -1,10 +1,15 @@
 import * as React from "react"
 import { ThemeToggler } from "gatsby-plugin-dark-mode"
 
+interface ThemeProps {
+  theme?: string
+  toggleTheme: React.Dispatch<React.SetStateAction<string>>
+}
+
 const DarkMode = () => {
   return (
     <ThemeToggler>
-      {({ theme, toggleTheme }: any) => (
+      {({ theme, toggleTheme }: ThemeProps) => (
         <label className="toggle">
           <input
             aria-label="Toggle dark mode"

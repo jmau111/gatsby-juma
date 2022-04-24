@@ -2,7 +2,7 @@ import * as React from "react"
 import { Link } from "gatsby"
 
 type ImageProps = {
-  imageUrl: string
+  imageUrl?: string
   title?: string
   url: string
   className?: string

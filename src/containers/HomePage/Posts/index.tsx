@@ -2,6 +2,29 @@ import React from "react"
 import { useStaticQuery, Link, graphql } from "gatsby"
 import ImageLink from "../../../components/ImageLink"
 
+interface Node {
+  node: {
+    frontmatter: {
+      title?: string
+      date?: string
+      image: {
+        childImageSharp: {
+          gatsbyImageData: {
+            images: {
+              fallback: {
+                src: string
+              }
+            }
+          }
+        }
+      }
+    }
+    fields: {
+      slug: string
+    }
+  }
+}
+
 const Posts = () => {
   const Data = useStaticQuery(graphql`
     query {
@@ -35,16 +58,12 @@ const Posts = () => {
     <section className="last-posts">
       <h2 className="shadowed border">Last posts</h2>
       <ul>
-        {LastPosts.map(({ node }: any) => {
+        {LastPosts.map(({ node }: Node) => {
           const title = node.frontmatter.title || node.fields.slug
           return (
             <li className="card" key={node.fields.slug}>
               <ImageLink
-                imageUrl={
-                  node.frontmatter.image == null
-                    ? null
-                    : node.frontmatter.image?.childImageSharp?.gatsbyImageData?.images?.fallback?.src
-                }
+                imageUrl={node.frontmatter.image?.childImageSharp?.gatsbyImageData?.images?.fallback?.src}
                 url={node.fields.slug}
               />
               <ul className="post-metadata">
