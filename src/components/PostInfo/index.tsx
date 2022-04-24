@@ -5,7 +5,7 @@ type PostInfoProps = {
   isPageTitle?: boolean
   title: string
   date?: string
-  html: any
+  html: string
   image?: any
   className?: string
 }
@@ -14,7 +14,7 @@ const PostInfo: React.FunctionComponent<PostInfoProps> = ({
   isPageTitle,
   title,
   date,
-  html,
+  html = "",
   image,
   className,
   ...props
