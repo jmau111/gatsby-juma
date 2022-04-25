@@ -6163,10 +6163,10 @@ gatsby-plugin-preact@^6.12.1:
     "@prefresh/babel-plugin" "^0.4.3"
     "@prefresh/webpack" "^3.3.3"
 
-gatsby-plugin-react-helmet@5.12.0:
-  version "5.12.0"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-react-helmet/-/gatsby-plugin-react-helmet-5.12.0.tgz#53fa1c9fde7fc0a70c29dd0c6707f157e04598e8"
-  integrity sha512-iBr3XfzQeoLIXL9ju1df9N+E2SKNEXOd0hMejwbWwUgKstBrqrUz4VRDAnM39hKrXFFUYWqCrlo2esr8WpnfJQ==
+gatsby-plugin-react-helmet@5.12.1:
+  version "5.12.1"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-react-helmet/-/gatsby-plugin-react-helmet-5.12.1.tgz#98205abb73cd7a522f2891b3a42514ae2b41ca57"
+  integrity sha512-lW9uRpkccSj0NC41dunFM4AoDuQockgpWHcvLivzGWMnWYtGWPNci7zy8+NUL1+6CchQqWTr0LZEeGYgpHym+w==
   dependencies:
     "@babel/runtime" "^7.15.4"
 
