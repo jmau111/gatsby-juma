@@ -4,7 +4,7 @@
   "version": "1.1",
   "author": "Julien Maury",
   "dependencies": {
-    "autoprefixer": "^10.4.4",
+    "autoprefixer": "^10.4.6",
     "axios": "^0.26.1",
     "browserslist": "^4.20.2",
     "formik": "^2.2.9",
@@ -22,7 +22,7 @@
     "gatsby-plugin-sharp": "^4.12.1",
     "gatsby-plugin-typography": "^4.12.1",
     "gatsby-remark-images": "^6.12.1",
-    "gatsby-remark-smartypants": "^5.12.1",
+    "gatsby-remark-smartypants": "^5.13.0",
     "gatsby-source-filesystem": "^4.12.1",
     "gatsby-transformer-remark": "^5.12.1",
     "gatsby-transformer-sharp": "^4.12.1",
