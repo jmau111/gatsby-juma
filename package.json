@@ -8,7 +8,7 @@
     "axios": "^0.26.1",
     "browserslist": "^4.20.2",
     "formik": "^2.2.9",
-    "gatsby": "^4.12.1",
+    "gatsby": "^4.13.1",
     "gatsby-plugin-dark-mode": "^1.1.2",
     "gatsby-plugin-image": "^2.12.1",
     "gatsby-plugin-local-search": "^2.0.1",
