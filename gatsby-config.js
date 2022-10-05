@@ -1,13 +1,12 @@
 const autoprefixer = require(`autoprefixer`)
 
 module.exports = {
-  pathPrefix: `/gatsby-juma`,
   siteMetadata: {
     title: `Gatsby Juma`,
     author: `Julien Maury`,
     about: `A Gatsby blue Theme using typescript`,
     description: `A Gatsby Blog theme`,
-    siteUrl: `https://demos.julien-maury.dev`,
+    siteUrl: `https://demos.julien-maury.dev/gatsby-juma`,
   },
   plugins: [
     `gatsby-plugin-preact`,

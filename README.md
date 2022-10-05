@@ -30,17 +30,14 @@ There's a default `/posts/` page with all posts and pagination. You have to manu
 Open `./gatsby-config.js` and modify:
 
 ```js
-  pathPrefix: `/gatsby-juma`,
   siteMetadata: {
     title: `Gatsby Juma`,
     author: `Julien Maury`,
     about: `A Gatsby blue Theme using typescript`,
     description: `A Gatsby Blog theme`,
-    siteUrl: `https://demos.julien-maury.dev`,
+    siteUrl: `https://demos.julien-maury.dev/gatsby-juma`,
   },
 ```
-
-I use pathPrefix because I host the demo in a subfolder, but you don't have to use this parameter if your production URL is a root URL. 
 
 For more advanced users, there's the dotenv module, but it's not configured yet.
 
@@ -49,7 +46,7 @@ For more advanced users, there's the dotenv module, but it's not configured yet.
 If you need google, add the plugin:
 
 ```
-yarn add gatsby-plugin-google-analytics
+npm i gatsby-plugin-google-analytics
 ```
 
 Then, add the entry in `./gatsby-config.js`:
@@ -72,7 +69,7 @@ Go modify `./static/humans.txt` with your team info.
 
 ## Weird issues
 
-If you have some issues with static images and queries, you might save a lot of time by using the custom yarn command:
+If you have some issues with static images and queries, you might save a lot of time by using the custom npm command:
 
 ```
 yarn cleandev
@@ -127,7 +124,7 @@ This theme is barebone (on purpose). However, some additional feature might be i
 
 6.  **`LICENSE`**: This Gatsby starter is licensed under the 0BSD license. This means that you can see this file as a placeholder and replace it with your own license.
 
-7.  **`yarn.lock`** (See `package.json` below, first). This is an automatically generated file based on the exact versions of your yarn dependencies that were installed for your project. **(You won’t change this file directly).**
+7.  **`package-lock.json`** (See `package.json` below, first). This is an automatically generated file based on the exact versions of your npm dependencies that were installed for your project. **(You won’t change this file directly).**
 
 8.  **`package.json`**: A manifest file for Node.js projects, which includes things like metadata (the project’s name, author, etc). This manifest is how npm knows which packages to install for your project.
 
