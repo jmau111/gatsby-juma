@@ -39,7 +39,7 @@
     "typography": "^0.16.21"
   },
   "devDependencies": {
-    "@babel/core": "^7.19.3",
+    "@babel/core": "^7.20.5",
     "@babel/eslint-parser": "^7.19.1",
     "@types/lodash": "^4.14.186",
     "@types/node": "^18.11.13",
