@@ -27,15 +27,15 @@ There's a default `/posts/` page with all posts and pagination. You have to manu
 
 ## Change siteURL
 
-Open `./gatsby-config.js` and modify:
+Open `./gatsby-config.js` and modify it with your information:
 
 ```js
   siteMetadata: {
-    title: `Gatsby Juma`,
-    author: `Julien Maury`,
-    about: `A Gatsby blue Theme using typescript`,
-    description: `A Gatsby Blog theme`,
-    siteUrl: `https://demos.julien-maury.dev/gatsby-juma`,
+    title: ``,
+    author: ``,
+    about: ``,
+    description: ``,
+    siteUrl: ``,
   },
 ```
 
