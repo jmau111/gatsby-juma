@@ -6,7 +6,7 @@ module.exports = {
     author: `Julien Maury`,
     about: `A Gatsby blue Theme using typescript`,
     description: `A Gatsby Blog theme`,
-    siteUrl: `https://demos.julien-maury.dev/gatsby-juma`,
+    siteUrl: ``,
   },
   plugins: [
     `gatsby-plugin-preact`,
