@@ -3,6 +3,7 @@ import { Link } from "gatsby"
 import Menu from "./menu"
 import DarkMode from "../DarkMode"
 import SearchBar from "../SearchBar"
+import logo from "/images/logo.png"
 
 type HeaderProps = {
   className?: string
@@ -42,7 +43,7 @@ const Header: React.FunctionComponent<HeaderProps> = ({ className, ...props }) =
     <header className={customClasses.join(` `)} {...props}>
       <nav className="navbar">
         <Link to="/">
-          <img className="logo" src="/logo.png" width="42" height="42" alt="" />
+          <img className="logo" src={logo} width="42" height="42" alt="" />
           <span className="screen-reader-text">Go to Homepage</span>
         </Link>
 
