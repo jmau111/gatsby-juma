@@ -61,7 +61,7 @@
     "stylelint-config-prettier": "^9.0.4",
     "stylelint-config-recommended": "^9.0.0",
     "stylelint-prettier": "^2.0.0",
-    "typescript": "^4.8.4"
+    "typescript": "^4.9.4"
   },
   "homepage": "https://github.com/jmau111/gatsby-juma.git#readme",
   "keywords": [
