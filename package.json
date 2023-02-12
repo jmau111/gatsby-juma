@@ -6,7 +6,7 @@
   "dependencies": {
     "autoprefixer": "^10.4.13",
     "axios": "^1.2.3",
-    "browserslist": "^4.21.4",
+    "browserslist": "^4.21.5",
     "formik": "^2.2.9",
     "gatsby": "^4.25.3",
     "gatsby-plugin-dark-mode": "^1.1.2",
